@@ -10,7 +10,7 @@ export default function Contribute() {
         <>
             <Head>
                 <title>Contribute - Verste</title>
-                <meta name="description" content="Earn volunteer hours for translating books, transcribing videos, and simplifying long texts!" />
+                <meta name="description" content="Become part of a global community making content accessible for all." />
                 <meta property="og:title" content="Verste | Translate. Transcribe. Simplify." />
                 <meta property="og:url" content="https://www.verste.org/" />
                 <meta property="og:site_name" content="verste.org" />
@@ -22,8 +22,8 @@ export default function Contribute() {
                 title1="Translate."
                 title2="Transcribe."
                 title3="Simplify."
-                desc1="Earn volunteer hours for translating books, transcribing videos, and simplifying texts!"
-                desc2="Sign up here to get early access!"
+                desc1="Become part of a global community making content accessible for all."
+                desc2="Join the waitlist for our private beta to get early access"
                 sheet="contribute"
                 pic='/books.png'
             />
