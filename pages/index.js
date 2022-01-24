@@ -1,31 +1,13 @@
-import { SimpleGrid, Heading, Spinner, Input, FormControl, Text, Box, Img, Flex, chakra, Button } from "@chakra-ui/react"
+import { SimpleGrid, Heading, Link, Input, FormControl, Text, Box, Img, Flex, chakra, Button } from "@chakra-ui/react"
 import React, { useState } from "react"
 import { Formik, Form } from "formik";
 import { FadeIn } from "../components/animations/FadeIn";
 
 import Head from "next/head"
+import { motion } from "framer-motion";
 export default function Home() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
-
-  const getTime = () => {
-    let diffTime = Math.abs(new Date().valueOf() - new Date('02 Feb 2022').valueOf());
-    let days = diffTime / (24 * 60 * 60 * 1000);
-    let hours = (days % 1) * 24;
-    let minutes = (hours % 1) * 60;
-    let secs = (minutes % 1) * 60;
-    [days, hours, minutes, secs] = [Math.floor(days), Math.floor(hours), Math.floor(minutes), Math.floor(secs)]
-    return [days, hours, minutes, secs]
-  }
-
-
-  const times = getTime();
-  const units = ["days", "hours", "minutes", "seconds"]
-
-  // const [time, setTime] = useState(times)
-  // setInterval(() => {
-  //   setTime(getTime())
-  // }, 1000)
 
 
   const subscribeEmail = async event => {
@@ -67,16 +49,19 @@ export default function Home() {
       </Head>
       <SimpleGrid columns={{ base: 1, lg: 2 }} h="100vh" spacing={0}>
         <Box bgImage="url('/purple_grad.png')" bgRepeat="repat" bgSize="cover" h='100vh' p={4}>
-          <FadeIn>
-            <Heading color="white" fontSize="4xl">Verste</Heading>
+          <FadeIn delay={0.2}>
+            <Link href="/" _hover={{ scale: 1.1 }}>
+              <Heading color="white" fontSize="4xl" fontWeight='black' d='inline'>Verste</Heading>
+              <Heading color="#FFF280" fontSize="4xl" fontWeight='black' d='inline'> Contributor</Heading>
+            </Link>
           </FadeIn>
 
-          <Flex height='90vh' alignItems="center">
+          <Flex height='90vh' alignItems="center" maxW='700px' mx='auto'>
             <Box>
 
               <FadeIn delay={0.8}>
                 <Text fontSize='5xl' color='white' fontWeight='bold'>
-                  Translate. <chakra.span color="#FFF280">Transcribe.</chakra.span> Simplify.
+                  <motion.a whileHover={{ scale: 1.2 }} style={{ x: 100 }}>Translate</motion.a>. <chakra.span color="#FFF280">Transcribe.</chakra.span> Simplify.
                 </Text>
               </FadeIn>
 
@@ -137,16 +122,18 @@ export default function Home() {
                               color="#9e9d9d"
                               _focus=""
                               _hover=""
+                              fontSize='lg'
+                              shadow='lg'
                             />
                           </FormControl>
                           <Button
                             id="signupFooter"
                             type="submit"
+                            shadow='lg'
                             w={{
                               base: 'full',
                               md: 'auto',
                             }}
-                            fontSize="sm"
                             px="12"
                             roundedStart={{
                               md: '0',
@@ -159,6 +146,7 @@ export default function Home() {
                             _hover={{ px: "75px" }}
                             isLoading={loading}
                             loadingText="Working magic.."
+                            fontSize='lg'
                           >
 
                             <Text>Sign Up</Text>
@@ -167,7 +155,7 @@ export default function Home() {
 
                         </Box>
                         <Box textAlign="left" w="100%">
-                          <Text id="formResponseFooter" fontSize="lg" fontStyle="italic" color="white" mt="2">
+                          <Text id="formResponseFooter" fontSize="lg" color="white" mt="2" fontWeight='bold'>
                             Sign up here to get early access!
                           </Text>
                         </Box>
