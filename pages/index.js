@@ -1,4 +1,4 @@
-import { SimpleGrid, Heading, Link, Input, FormControl, Text, Box, Img, Flex, chakra, Button } from "@chakra-ui/react"
+import { SimpleGrid, Heading, Link, Input, FormControl, Text, Box, Img, Flex, chakra, Button, useDisclosure, ScaleFade } from "@chakra-ui/react"
 import React, { useState } from "react"
 import { Formik, Form } from "formik";
 import { FadeIn } from "../components/animations/FadeIn";
@@ -6,6 +6,7 @@ import { FadeIn } from "../components/animations/FadeIn";
 import Head from "next/head"
 import { motion } from "framer-motion";
 export default function Home() {
+  const { isOpen, onToggle } = useDisclosure()
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -60,8 +61,8 @@ export default function Home() {
             <Box>
 
               <FadeIn delay={0.8}>
-                <Text fontSize='5xl' color='white' fontWeight='bold'>
-                  <motion.a whileHover={{ scale: 1.2 }} style={{ x: 100 }}>Translate</motion.a>. <chakra.span color="#FFF280">Transcribe.</chakra.span> Simplify.
+                <Text fontSize='5xl' color='white' fontWeight='bold' noOfLines={1}>
+                  <chakra.span _hover={{ fontSize: '6xl' }} transition='all 0.2s'>Translate</chakra.span>. <chakra.span _hover={{ fontSize: '6xl' }} transition='all 0.2s' color="#FFF280">Transcribe.</chakra.span> <chakra.span _hover={{ fontSize: '6xl' }} transition='all 0.2s'> Simplify</chakra.span>.
                 </Text>
               </FadeIn>
 
@@ -72,23 +73,6 @@ export default function Home() {
                 </Text>
               </FadeIn>
 
-              {/* <SimpleGrid columns={4} spacing={4} mt='3' fontSize='4xl' fontWeight='bold' maxW='sm'>
-                {time.map((item, i) => {
-                  return (
-                    <FadeIn delay={1.4} key={i} >
-                      <Box textAlign="center">
-                        <Text bg='white' align='center' rounded='md' py={4}>
-                          {item}
-                        </Text>
-                        <Text color='white' fontSize='lg' mt="1">
-                          {units[i]}
-                        </Text>
-                      </Box>
-                    </FadeIn>
-                  )
-                }
-                )}
-              </SimpleGrid> */}
               {!submitted && <FadeIn delay={1.6}>
                 <Box mt={6}>
 
@@ -100,7 +84,6 @@ export default function Home() {
                           display={{
                             md: 'flex',
                           }}
-                        // maxW="xl"
                         >
                           <FormControl id="emailFooter" isRequired>
                             <Input
@@ -112,7 +95,7 @@ export default function Home() {
                                 lg: '0',
                               }}
                               flex="1"
-                              placeholder="email"
+                              placeholder="Email"
                               type="email"
                               letterSpacing={1}
                               border="1px solid"
@@ -165,8 +148,7 @@ export default function Home() {
                 </Box>
               </FadeIn>}
 
-              {
-                submitted &&
+              <ScaleFade in={submitted} initialScale={0.1}>
                 <Box transition='all 0.1s' bg='#ADA7F1' rounded='md' p={2}>
                   <Text fontSize="xl" fontWeight='bold' color="white" >
                     Thanks! We&apos;ll see you soon 👋
@@ -176,7 +158,7 @@ export default function Home() {
                     In the meantime, feel free to share Verste with your friends!
                   </Text>
                 </Box>
-              }
+              </ScaleFade>
             </Box>
 
           </Flex>
