@@ -46,8 +46,8 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic 
             <Flex height='90vh' alignItems="center" maxW='700px' mx='auto'>
                 <Box>
                     <FadeIn delay={0.8}>
-                        <Text fontSize='5xl' color='white' fontWeight='bold' noOfLines={1}>
-                            <chakra.span _hover={{ color: '#7ef3f7' }} transition='all 0.2s'>{title1}</chakra.span> <chakra.span _hover={{ color: '#7ef3f7' }} transition='all 0.2s' color="#FFF280">{title2}</chakra.span> <chakra.span _hover={{ color: '#7ef3f7' }} transition='all 0.2s'> {title3}</chakra.span>.
+                        <Text fontSize='5xl' color='white' fontWeight='bold'>
+                            <chakra.span _hover={{ color: '#7ef3f7' }} transition='all 0.2s'>{title1}</chakra.span> <chakra.span _hover={{ color: '#7ef3f7' }} transition='all 0.2s' color="#FFF280">{title2}</chakra.span> <chakra.span _hover={{ color: '#7ef3f7' }} transition='all 0.2s'> {title3}</chakra.span>
                         </Text>
                     </FadeIn>
 
@@ -58,14 +58,24 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic 
                         </Text>
                     </FadeIn>
 
-                    {!submitted && <FadeIn delay={1.6}>
-                        <Box mt={6}>
+                    <Box mt="0">
+                        <FadeIn delay={1.6}>
+                            {sheet == "general" && (
+                                <Text fontWeight='bold' color='white' fontSize='lg'> Want to help us translate? <Link href='/contribute' bg='whiteAlpha.300' _hover={{ bg: 'whiteAlpha.500' }} p={1} rounded='md'>click here</Link>!</Text>
+                            )}
 
+                            {sheet == "contribute" && (
+                                <Text fontWeight='bold' color='white' fontSize='lg'> Want to join as a reader? <Link href='/' bg='whiteAlpha.300' _hover={{ bg: 'whiteAlpha.500' }} p={1} rounded='md'>click here</Link>!</Text>
+                            )}
+                        </FadeIn>
+                    </Box>
+
+                    {!submitted && <FadeIn delay={2.0}>
+                        <Box mt={12}>
                             <Formik>
                                 <Form onSubmit={subscribeEmail}>
                                     <Box>
                                         <Box
-                                            mt="8"
                                             display={{
                                                 md: 'flex',
                                             }}
@@ -118,7 +128,6 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic 
                                             >
 
                                                 <Text>Sign Up</Text>
-
                                             </Button>
 
                                         </Box>
@@ -133,20 +142,10 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic 
                         </Box>
                     </FadeIn>}
 
-                    <Box mt="10">
-                        <FadeIn delay={1.8}>
-                            {sheet == "general" && (
-                                <Text fontWeight='bold' color='white' fontSize='lg'> To join as a contributor, <Link href='/contribute' bg='whiteAlpha.300' _hover={{ bg: 'whiteAlpha.500' }} p={1} rounded='md'>click here</Link>!</Text>
-                            )}
 
-                            {sheet == "contribute" && (
-                                <Text fontWeight='bold' color='white' fontSize='lg'> To join as a reader, <Link href='/' bg='whiteAlpha.300' _hover={{ bg: 'whiteAlpha.500' }} p={1} rounded='md'>click here</Link>!</Text>
-                            )}
-                        </FadeIn>
-                    </Box>
 
                     <ScaleFade in={submitted} initialScale={0.1}>
-                        <Box transition='all 0.1s' bg='#ADA7F1' rounded='md' p={2}>
+                        <Box transition='all 0.1s' bg='#ADA7F1' rounded='md' p={2} mt="3">
                             <Text fontSize="xl" fontWeight='bold' color="white" >
                                 Thanks! We&apos;ll see you soon 👋
                             </Text>
@@ -156,6 +155,10 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic 
                             </Text>
                         </Box>
                     </ScaleFade>
+
+
+
+
                 </Box>
 
             </Flex>
@@ -163,7 +166,6 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic 
 
         <Box>
             <Img src={pic} h='100vh' w='100%' objectFit="cover" d={{ base: 'none', lg: 'block' }} />
-
         </Box>
     </SimpleGrid >)
 }
