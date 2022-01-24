@@ -1,10 +1,12 @@
-import { SimpleGrid, Heading, Input, FormControl, Text, Box, Img, Flex, chakra, Button } from "@chakra-ui/react"
+import { SimpleGrid, Heading, Spinner, Input, FormControl, Text, Box, Img, Flex, chakra, Button } from "@chakra-ui/react"
 import React, { useState } from "react"
 import { Formik, Form } from "formik";
 import { FadeIn } from "../components/animations/FadeIn";
 
 import Head from "next/head"
 export default function Home() {
+  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const getTime = () => {
     let diffTime = Math.abs(new Date().valueOf() - new Date('02 Feb 2022').valueOf());
@@ -27,7 +29,9 @@ export default function Home() {
 
 
   const subscribeEmail = async event => {
-    let email = document.getElementById('emailFooter').value
+    let email = document.getElementById('emailFooter').value;
+
+    setLoading(true);
     console.log(`Subscribing ${email} to newsletter...`)
 
     const res = await fetch(`/api/subscribe`,
@@ -44,10 +48,7 @@ export default function Home() {
     )
 
     let result = await res.json()
-    document.getElementById('formResponseFooter').innerText = "Thanks! See you soon 👋"
-    document.getElementById('emailFooter').remove()
-    document.getElementById('signupFooter').remove()
-    console.log(result)
+    setSubmitted(true);
   }
 
 
@@ -57,7 +58,7 @@ export default function Home() {
       <Head>
         <title>Verste | Translate. Transcribe. Simplify.</title>
         <meta name="description" content="Earn volunteer hours for translating books, transcribing videos, and simplifying long texts!" />
-        <meta property="og:title" content="Bit Project" />
+        <meta property="og:title" content="Verste | Translate. Transcribe. Simplify." />
         <meta property="og:url" content="https://www.verste.org/" />
         <meta property="og:site_name" content="verste.org" />
         <meta property="og:type" content="website" />
@@ -81,7 +82,7 @@ export default function Home() {
 
               <FadeIn delay={1.2}>
                 <Text color="white" fontSize='xl' maxW='600px' fontWeight="semibold" my={6}>
-                  Earn volunteer hours for translating books, transcribing videos, and simplifying long texts!
+                  Earn volunteer hours for translating books, transcribing videos, and simplifying texts!
                 </Text>
               </FadeIn>
 
@@ -102,7 +103,7 @@ export default function Home() {
                 }
                 )}
               </SimpleGrid> */}
-              <FadeIn delay={1.6}>
+              {!submitted && <FadeIn delay={1.6}>
                 <Box mt={6}>
 
                   <Formik>
@@ -155,9 +156,12 @@ export default function Home() {
                             transition='all 0.4s'
                             letterSpacing="wide"
                             _hover={{ px: "75px" }}
-                            _highlighted=""
+                            isLoading={loading}
+                            loadingText="Working magic.."
                           >
-                            Sign Up
+
+                            <Text>Sign Up</Text>
+
                           </Button>
 
                         </Box>
@@ -170,7 +174,20 @@ export default function Home() {
                     </Form>
                   </Formik>
                 </Box>
-              </FadeIn>
+              </FadeIn>}
+
+              {
+                submitted &&
+                <Box transition='all 0.1s' bg='#ADA7F1' rounded='md' p={2}>
+                  <Text fontSize="xl" fontWeight='bold' color="white" >
+                    Thanks! We&apos;ll see you soon 👋
+                  </Text>
+
+                  <Text color='white' fontWeight='bold' >
+                    In the meantime, feel free to share Verste with your friends!
+                  </Text>
+                </Box>
+              }
             </Box>
 
           </Flex>
@@ -180,7 +197,7 @@ export default function Home() {
           <Img src='/books.png' h='100vh' w='100%' objectFit="cover" d={{ base: 'none', lg: 'block' }} />
 
         </Box>
-      </SimpleGrid>
+      </SimpleGrid >
     </>
   )
 }
