@@ -29,6 +29,7 @@ export default function Home() {
 
 
   const subscribeEmail = async event => {
+    event.preventDefault();
     let email = document.getElementById('emailFooter').value;
 
     setLoading(true);
