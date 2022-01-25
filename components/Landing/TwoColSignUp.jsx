@@ -1,11 +1,20 @@
-import { SimpleGrid, Heading, Link, Input, FormControl, Text, Box, Img, Flex, chakra, Button, useDisclosure, ScaleFade } from "@chakra-ui/react"
+import { SimpleGrid, Heading, Link, Input, FormControl, Text, Box, Img, Flex, chakra, Button, Tabs, TabList, TabPanels, Tab, TabPanel, ScaleFade } from "@chakra-ui/react"
 import { FadeIn } from '../animations/FadeIn'
 import { Formik, Form } from "formik";
 import React, { useState } from "react"
 
-export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic }) => {
+export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic, tabs, tabsContent }) => {
     const [submitted, setSubmitted] = useState(false)
     const [loading, setLoading] = useState(false)
+
+    let gradient;
+
+    if (sheet === 'general') {
+        gradient = 'linear(to-r, brand.darkerPurple, pink.700)'
+    }
+    else {
+        gradient = 'linear(to-r, brand.darkerPurple, brand.darkBlue)'
+    }
 
 
     const subscribeEmail = async event => {
@@ -35,33 +44,23 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic 
 
 
     return (<SimpleGrid columns={{ base: 1, lg: 2 }} h="100vh" spacing={0}>
-        <Box bgImage="url('/purple_grad.png')" bgRepeat="repat" bgSize="cover" h='100vh' p={4}>
+        <Box bgGradient={gradient} bgRepeat="repat" bgSize="cover" h='100vh' p={4} textAlign={{ base: 'center', lg: 'left' }}>
             <FadeIn delay={0.2}>
                 <Link href="/" _hover={{ scale: 1.1 }}>
-                    <Heading color="white" fontSize="4xl" fontWeight='black' d='inline'>Verste</Heading>
-                    {sheet == 'contribute' && <Heading color="#FFF280" fontSize="4xl" fontWeight='black' d='inline'> Contributor</Heading>}
+                    <Heading color="brand.white" fontSize="4xl" fontWeight='black' d='inline'>Verste</Heading>
+                    {sheet == 'contribute' && <Heading color="brand.lightYellow" fontSize="4xl" fontWeight='black' d='inline'> Contributor</Heading>}
                 </Link>
             </FadeIn>
 
             <Flex height='90vh' alignItems="center" maxW='700px' mx='auto'>
+
+
                 <Box>
-                    <FadeIn delay={0.8}>
-                        <Text fontSize='5xl' color='white' fontWeight='bold'>
-                            <chakra.span _hover={{ color: '#7ef3f7' }} transition='all 0.2s'>{title1}</chakra.span> <chakra.span _hover={{ color: '#7ef3f7' }} transition='all 0.2s' color="#FFF280">{title2}</chakra.span> <chakra.span _hover={{ color: '#7ef3f7' }} transition='all 0.2s'> {title3}</chakra.span>
-                        </Text>
-                    </FadeIn>
-
-
-                    <FadeIn delay={1.2}>
-                        <Text color="white" fontSize='xl' maxW='600px' fontWeight="semibold" my={3}>
-                            {desc1}
-                        </Text>
-                    </FadeIn>
 
                     <Box mt="0">
                         <FadeIn delay={1.6}>
                             {sheet == "general" && (
-                                <Text fontWeight='bold' color='white' fontSize='lg'> Want to help us translate? <Link href='/contribute' bg='whiteAlpha.300' _hover={{ bg: 'whiteAlpha.500' }} p={1} rounded='md'>click here</Link>!</Text>
+                                <Text fontWeight='bold' color='white' fontSize='lg'> Want to join our team? <Link href='/contribute' bg='whiteAlpha.300' _hover={{ bg: 'whiteAlpha.500' }} p={1} rounded='md'>click here</Link>!</Text>
                             )}
 
                             {sheet == "contribute" && (
@@ -70,8 +69,46 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic 
                         </FadeIn>
                     </Box>
 
+                    <FadeIn delay={0.8}>
+                        <Text fontSize={{ base: '4xl', md: '5xl' }} color='brand.white' fontWeight='bold'>
+                            <chakra.span _hover={{ color: 'brand.lightPurple' }} transition='all 0.2s'>{title1}</chakra.span> <chakra.span _hover={{ color: 'brand.lightPurple' }} transition='all 0.2s' color="brand.lightYellow">{title2}</chakra.span> <chakra.span _hover={{ color: 'brand.lightPurple' }} transition='all 0.2s'> {title3}</chakra.span>
+                        </Text>
+                    </FadeIn>
+
+
+                    <FadeIn delay={1.2}>
+                        <Text color="brand.white" fontSize='xl' maxW='600px' fontWeight="semibold" my={3}>
+                            {desc1}
+                        </Text>
+                    </FadeIn>
+
+
+                    <Tabs size='md' variant='unstyled' mt={10} color='brand.white'>
+                        <TabList justifyContent={{ base: 'center', lg: "start" }}>
+                            {
+                                tabs.map((tab, i) => {
+                                    return (
+                                        <Tab fontWeight="bold" _selected={{ bg: 'brand.lightPurple' }} rounded='md' fontSize='lg' key={i}>{tab}</Tab>
+                                    )
+                                })
+                            }
+                        </TabList>
+                        <TabPanels mt={1}>
+                            {
+                                tabsContent.map((content, i) => {
+                                    return (
+                                        <TabPanel key={i} p={0}>
+                                            {content}
+                                        </TabPanel>
+                                    )
+                                })
+                            }
+                        </TabPanels>
+                    </Tabs>
+
+
                     {!submitted && <FadeIn delay={2.0}>
-                        <Box mt={12}>
+                        <Box mt={10}>
                             <Formik>
                                 <Form onSubmit={subscribeEmail}>
                                     <Box>
@@ -145,7 +182,7 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic 
 
 
                     <ScaleFade in={submitted} initialScale={0.1}>
-                        <Box transition='all 0.1s' bg='#ADA7F1' rounded='md' p={2} mt="3">
+                        <Box transition='all 0.1s' bg='brand.lightPurple' rounded='md' p={2} mt="3">
                             <Text fontSize="xl" fontWeight='bold' color="white" >
                                 Thanks! We&apos;ll see you soon 👋
                             </Text>
