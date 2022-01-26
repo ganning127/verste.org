@@ -1,11 +1,9 @@
 import { TwoColSignUp } from "../components/Landing/TwoColSignUp"
-
-
+import { About } from '../components/LandingTabs/About'
+import { Benefits } from '../components/LandingTabs/Benefits'
+import { Contact } from '../components/LandingTabs/Contact'
 import Head from "next/head"
 export default function Contribute() {
-
-
-
     return (
         <>
             <Head>
@@ -22,15 +20,15 @@ export default function Contribute() {
                 title1="Translate."
                 title2="Transcribe."
                 title3="Simplify."
-                desc1="Become part of a global community making content accessible for all."
+                desc1="Make an impact on your community."
                 desc2="Join the waitlist for our private beta to get early access"
                 sheet="contribute"
                 pic='/books.jpeg'
                 tabs={['About', 'Benefits', 'Contact']}
                 tabsContent={[
-                    'We are a nonprofit organization based in Durham, North Carolina with the mission of making the world a better place through the power of language. We are a community of people who love language and want to help make it accessible for everyone.',
-                    'By joining us, you will be able to earn volunteer hours for translating books, transcribing videos, and simplifying long texts. You will also be able to earn points for helping other people in the community.',
-                    'If you have any questions, please contact us at versteteam@gmail.com'
+                    <About key={1} />,
+                    <Benefits key={2} content='contribute' />,
+                    <Contact key={3} />
                 ]}
             />
 

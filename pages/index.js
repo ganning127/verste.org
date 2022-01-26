@@ -1,7 +1,9 @@
 import { TwoColSignUp } from "../components/Landing/TwoColSignUp"
 import { About } from '../components/LandingTabs/About'
-
+import { Benefits } from '../components/LandingTabs/Benefits'
+import { Contact } from '../components/LandingTabs/Contact'
 import Head from "next/head"
+
 export default function Home() {
 
 
@@ -29,8 +31,8 @@ export default function Home() {
         tabs={['About', 'Benefits', 'Contact']}
         tabsContent={[
           <About key={1} />,
-          'By joining us, you will be able to earn volunteer hours for translating books, transcribing videos, and simplifying long texts. You will also be able to earn points for helping other people in the community.',
-          'If you have any questions, please contact us at versteteam@gmail.com'
+          <Benefits key={2} content='general' />,
+          <Contact key={3} />
         ]}
       />
 

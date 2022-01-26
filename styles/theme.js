@@ -3,14 +3,15 @@ import { extendTheme } from "@chakra-ui/react"
 const theme = extendTheme({
     colors: {
         brand: {
-            "black": "#1F1F1F",
-            "white": "#FFFFFF",
-            "darkBlue": "#22165C",
-            "darkerPurple": "#38325C",
-            "darkPurple": "#3D28A7",
-            "lightPurple": "#8A79E1",
-            "lightYellow": "#FFF280",
-            "lightGray": "#F6F6F6"
+            "black": "#15162A",
+            "white": "#FAFAFF",
+            "gold": "#FFC020",
+            "gray": "#30343F",
+            "blue": "#6D73A1",
+            "blue.med": "#373E70",
+            "blue.dark": "#1D2559",
+            "blue.deep": "#000840",
+            "blue.light": "#bdc3f0"
 
         }
     },

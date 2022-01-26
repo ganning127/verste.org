@@ -10,10 +10,10 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
     let gradient;
 
     if (sheet === 'general') {
-        gradient = 'linear(to-r, brand.darkerPurple, pink.700)'
+        gradient = 'linear(to-r, brand.blue.deep, brand.blue.dark)'
     }
     else {
-        gradient = 'linear(to-r, brand.darkerPurple, brand.darkBlue)'
+        gradient = 'linear(to-r, brand.black, brand.blue.deep)'
     }
 
 
@@ -43,166 +43,165 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
     }
 
 
-    return (<SimpleGrid columns={{ base: 1, lg: 2 }} h="100vh" spacing={0}>
-        <Box bgGradient={gradient} bgRepeat="repat" bgSize="cover" h='100vh' p={4} textAlign={{ base: 'center', lg: 'left' }}>
-            <FadeIn delay={0.2}>
-                <Link href="/" _hover={{ scale: 1.1 }}>
-                    <Heading color="brand.white" fontSize="4xl" fontWeight='black' d='inline'>Verste</Heading>
-                    {sheet == 'contribute' && <Heading color="brand.lightYellow" fontSize="4xl" fontWeight='black' d='inline'> Contributor</Heading>}
+    return (
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={0} bgGradient={gradient} bgRepeat="repeat" bgSize="cover" minH='100vh'>
+            <Box textAlign={{ base: 'center', lg: 'left' }} p={4} >
+
+                <Link href="/" >
+                    <FadeIn delay={0.2}>
+                        <Heading color="brand.white" fontSize="4xl" fontWeight='black' d='inline' transition='all 0.4s' _hover={{ color: 'brand.gold' }}>Verste</Heading>
+                        {sheet == 'contribute' && <Heading color="brand.gold" fontSize="4xl" fontWeight='black' d='inline'> Contributor</Heading>}
+                    </FadeIn>
                 </Link>
-            </FadeIn>
-
-            <Flex height='90vh' alignItems="center" maxW='700px' mx='auto'>
 
 
-                <Box>
+                <Flex alignItems="center" maxW='700px' mx='auto' minH='80vh' mt={16}  >
+                    <Box>
+                        <Box>
+                            <FadeIn delay={0.6}>
+                                {sheet == "general" && (
+                                    <Text fontWeight='bold' color='brand.white' fontSize='lg'> Want to contribute? <Link href='/contribute' bg='brand.gray' _hover={{ color: 'brand.gold' }} p={1} rounded='md'>Join our team!</Link>!</Text>
+                                )}
 
-                    <Box mt="0">
-                        <FadeIn delay={1.6}>
-                            {sheet == "general" && (
-                                <Text fontWeight='bold' color='white' fontSize='lg'> Want to join our team? <Link href='/contribute' bg='whiteAlpha.300' _hover={{ bg: 'whiteAlpha.500' }} p={1} rounded='md'>click here</Link>!</Text>
-                            )}
+                                {sheet == "contribute" && (
+                                    <Text fontWeight='bold' color='brand.white' fontSize='lg'>Want to join as a reader? <Link href='/' bg='brand.blue' _hover={{ color: 'brand.gold' }} p={1} rounded='md'>click here</Link>!</Text>
+                                )}
+                            </FadeIn>
+                        </Box>
 
-                            {sheet == "contribute" && (
-                                <Text fontWeight='bold' color='white' fontSize='lg'> Want to join as a reader? <Link href='/' bg='whiteAlpha.300' _hover={{ bg: 'whiteAlpha.500' }} p={1} rounded='md'>click here</Link>!</Text>
-                            )}
+                        <FadeIn delay={1.0}>
+                            <Text fontSize={{ base: '4xl', md: '5xl' }} color='brand.white' fontWeight='bold'>
+                                <chakra.span >{title1}</chakra.span> <chakra.span transition='all 0.2s' color="#ffc020">{title2}</chakra.span> <chakra.span> {title3}</chakra.span>
+                            </Text>
                         </FadeIn>
-                    </Box>
-
-                    <FadeIn delay={0.8}>
-                        <Text fontSize={{ base: '4xl', md: '5xl' }} color='brand.white' fontWeight='bold'>
-                            <chakra.span _hover={{ color: 'brand.lightPurple' }} transition='all 0.2s'>{title1}</chakra.span> <chakra.span _hover={{ color: 'brand.lightPurple' }} transition='all 0.2s' color="brand.lightYellow">{title2}</chakra.span> <chakra.span _hover={{ color: 'brand.lightPurple' }} transition='all 0.2s'> {title3}</chakra.span>
-                        </Text>
-                    </FadeIn>
 
 
-                    <FadeIn delay={1.2}>
-                        <Text color="brand.white" fontSize='xl' maxW='600px' fontWeight="semibold" my={3}>
-                            {desc1}
-                        </Text>
-                    </FadeIn>
+                        <FadeIn delay={1.4}>
+                            <Text color="brand.white" fontSize='2xl' maxW='600px' fontWeight="semibold" my={3}>
+                                {desc1}
+                            </Text>
+                        </FadeIn>
+
+                        <FadeIn delay={1.8}>
+                            <Tabs size='md' variant='unstyled' mt={10} color='brand.white'>
+                                <TabList justifyContent={{ base: 'center', lg: "start" }}>
+                                    {
+                                        tabs.map((tab, i) => {
+                                            return (
+                                                <Tab fontWeight="bold" _selected={{ bg: 'brand.gray', color: 'brand.gold' }} _focus={{}} rounded='md' fontSize='lg' key={i}>{tab}</Tab>
+                                            )
+                                        })
+                                    }
+                                </TabList>
+                                <TabPanels mt={3} ml={3}>
+                                    {
+                                        tabsContent.map((content, i) => {
+                                            return (
+                                                <TabPanel key={i} p={0}>
+                                                    {content}
+                                                </TabPanel>
+                                            )
+                                        })
+                                    }
+                                </TabPanels>
+                            </Tabs>
+                        </FadeIn>
 
 
-                    <Tabs size='md' variant='unstyled' mt={10} color='brand.white'>
-                        <TabList justifyContent={{ base: 'center', lg: "start" }}>
-                            {
-                                tabs.map((tab, i) => {
-                                    return (
-                                        <Tab fontWeight="bold" _selected={{ bg: 'brand.lightPurple' }} rounded='md' fontSize='lg' key={i}>{tab}</Tab>
-                                    )
-                                })
-                            }
-                        </TabList>
-                        <TabPanels mt={1}>
-                            {
-                                tabsContent.map((content, i) => {
-                                    return (
-                                        <TabPanel key={i} p={0}>
-                                            {content}
-                                        </TabPanel>
-                                    )
-                                })
-                            }
-                        </TabPanels>
-                    </Tabs>
-
-
-                    {!submitted && <FadeIn delay={2.0}>
-                        <Box mt={10}>
-                            <Formik>
-                                <Form onSubmit={subscribeEmail}>
-                                    <Box>
-                                        <Box
-                                            display={{
-                                                md: 'flex',
-                                            }}
-                                        >
-                                            <FormControl id="emailFooter" isRequired>
-                                                <Input
-                                                    roundedEnd={{
+                        {!submitted && <FadeIn delay={2.2}>
+                            <Box mt={10}>
+                                <Formik>
+                                    <Form onSubmit={subscribeEmail}>
+                                        <Box>
+                                            <Box
+                                                display={{
+                                                    md: 'flex',
+                                                }}
+                                            >
+                                                <FormControl id="emailFooter" isRequired>
+                                                    <Input
+                                                        roundedEnd={{
+                                                            md: '0',
+                                                        }}
+                                                        mb={{
+                                                            base: '2',
+                                                            lg: '0',
+                                                        }}
+                                                        flex="1"
+                                                        placeholder="Email"
+                                                        type="email"
+                                                        letterSpacing={1}
+                                                        border="1px solid"
+                                                        borderColor="white"
+                                                        bg="white"
+                                                        _placeholder={{ color: '#BABABA' }}
+                                                        color="#9e9d9d"
+                                                        _focus=""
+                                                        _hover=""
+                                                        fontSize='lg'
+                                                        shadow='lg'
+                                                    />
+                                                </FormControl>
+                                                <Button
+                                                    id="signupFooter"
+                                                    type="submit"
+                                                    shadow='lg'
+                                                    w={{
+                                                        base: 'full',
+                                                        md: 'auto',
+                                                    }}
+                                                    px="12"
+                                                    roundedStart={{
                                                         md: '0',
                                                     }}
-                                                    mb={{
-                                                        base: '2',
-                                                        lg: '0',
-                                                    }}
-                                                    flex="1"
-                                                    placeholder="Email"
-                                                    type="email"
-                                                    letterSpacing={1}
-                                                    border="1px solid"
-                                                    borderColor="white"
-                                                    bg="white"
-                                                    _placeholder={{ color: '#BABABA' }}
-                                                    color="#9e9d9d"
-                                                    _focus=""
-                                                    _hover=""
+                                                    bg="brand.blue.dark"
+                                                    color="white"
+                                                    fontWeight="bold"
+                                                    transition='all 0.4s'
+                                                    letterSpacing="wide"
+                                                    _hover={{ px: "75px" }}
+                                                    isLoading={loading}
+                                                    loadingText="Working magic.."
                                                     fontSize='lg'
-                                                    shadow='lg'
-                                                />
-                                            </FormControl>
-                                            <Button
-                                                id="signupFooter"
-                                                type="submit"
-                                                shadow='lg'
-                                                w={{
-                                                    base: 'full',
-                                                    md: 'auto',
-                                                }}
-                                                px="12"
-                                                roundedStart={{
-                                                    md: '0',
-                                                }}
-                                                bg="#5A3074"
-                                                color="white"
-                                                fontWeight="bold"
-                                                transition='all 0.4s'
-                                                letterSpacing="wide"
-                                                _hover={{ px: "75px" }}
-                                                isLoading={loading}
-                                                loadingText="Working magic.."
-                                                fontSize='lg'
-                                            >
+                                                >
 
-                                                <Text>Sign Up</Text>
-                                            </Button>
+                                                    <Text>Sign Up</Text>
+                                                </Button>
 
+                                            </Box>
+                                            <Box textAlign={{ base: 'center', lg: 'left' }} w="100%">
+                                                <Text id="formResponseFooter" fontSize="lg" color="white" mt={3} fontWeight='bold'>
+                                                    {desc2}
+                                                </Text>
+                                            </Box>
                                         </Box>
-                                        <Box textAlign="left" w="100%">
-                                            <Text id="formResponseFooter" fontSize="lg" color="white" mt={3} fontWeight='bold'>
-                                                {desc2}
-                                            </Text>
-                                        </Box>
-                                    </Box>
-                                </Form>
-                            </Formik>
-                        </Box>
-                    </FadeIn>}
+                                    </Form>
+                                </Formik>
+                            </Box>
+                        </FadeIn>}
 
 
 
-                    <ScaleFade in={submitted} initialScale={0.1}>
-                        <Box transition='all 0.1s' bg='brand.lightPurple' rounded='md' p={2} mt="3">
-                            <Text fontSize="xl" fontWeight='bold' color="white" >
-                                Thanks! We&apos;ll see you soon 👋
-                            </Text>
+                        <ScaleFade in={submitted} initialScale={0.1}>
+                            <Box transition='all 0.1s' bg='brand.blue.dark' rounded='md' p={2} mt="10">
+                                <Text fontSize="xl" fontWeight='bold' color="white" >
+                                    Thanks! We&apos;ll see you soon 👋
+                                </Text>
 
-                            <Text color='white' fontWeight='bold' >
-                                In the meantime, feel free to share Verste with your friends!
-                            </Text>
-                        </Box>
-                    </ScaleFade>
+                                <Text color='white' fontWeight='bold' >
+                                    In the meantime, feel free to share Verste with your friends!
+                                </Text>
+                            </Box>
+                        </ScaleFade>
 
 
 
 
-                </Box>
+                    </Box>
 
-            </Flex>
-        </Box >
+                </Flex>
+            </Box >
 
-        <Box>
-            <Img src={pic} h='100vh' w='100%' objectFit="cover" d={{ base: 'none', lg: 'block' }} />
-        </Box>
-    </SimpleGrid >)
+            <Box minH='100vh' bgImage={`url('${pic}')`} bgSize='cover' bgRepeat='no-repeat' d={{ base: 'none', lg: 'block' }} bgPos='center' />
+        </SimpleGrid >)
 }
