@@ -5,7 +5,27 @@ import { GoogleSpreadsheet } from 'google-spreadsheet';
 export default async function handler(req, res) {
     const toEmail = req.body.email;
     const fromEmail = '"Verste Team" <versteteam@gmail.com>';
-    const text = `Hello!\n\nThanks for subscribing to Verste! We'll send you updates about Verste and upcoming events. Our website and platform wil be up and running very soon. In the meantime, if you have any questions, feel free to email versteteam@gmail.com!\n\nAll the best,\nVerste Team`;
+    const text = `
+        Hello!
+
+        <br />
+        <br />
+
+        We are so excited that you are interested in Verste! Our goal is simple: allow users to translate books, simplify hard-to-read texts, and transcribe videos for volunteer hours! Our team is working hard on Verste, please follow us on social media for updates.  We are also accepting new <a href="https://verste.org/contribute" target="_blank">contributors</a>!
+
+        <br />
+        <br />
+
+        Sincerely,
+        <br />
+        Verste Team
+        <br />
+        <a href="https://www.instagram.com/teamverste/">Instagram</a>
+        <a href="https://twitter.com/teamverste">Twitter</a>
+        <a href="https://www.tiktok.com/@teamverste">TikTok</a>
+
+
+    `;
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
@@ -21,7 +41,7 @@ export default async function handler(req, res) {
         from: fromEmail, // sender address
         to: toEmail, // list of receivers
         subject: "Thanks for signing up for Verste!", // Subject line
-        text
+        html: text // html body
     });
 
 
@@ -38,7 +58,6 @@ export default async function handler(req, res) {
     await doc.loadInfo(); // loads document properties and worksheets
 
     const index = doc.sheetsByIndex.findIndex(sheet => sheet.title === sheetType);
-    console.log(index);
 
     const sheet = doc.sheetsByIndex[index]; // or use doc.sheetsById[id]
     const date = new Date().toLocaleDateString("en-US");
