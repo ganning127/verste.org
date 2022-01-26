@@ -25,7 +25,7 @@ export default function Home() {
         title2="Translated."
         title3="Simplified."
         desc1="Read translated books, view captioned videos, and read summarized works!"
-        desc2="Sign up here to get early access!"
+        desc2="Sign up to get early access!"
         sheet="general"
         pic='/landing.jpeg'
         tabs={['About', 'Benefits', 'Contact']}

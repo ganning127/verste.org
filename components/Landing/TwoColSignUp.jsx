@@ -60,7 +60,7 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
                         <Box>
                             <FadeIn delay={0.6}>
                                 {sheet == "general" && (
-                                    <Text fontWeight='bold' color='brand.white' fontSize='lg'> Want to contribute? <Link href='/contribute' bg='brand.gray' _hover={{ color: 'brand.gold' }} p={1} rounded='md'>Join our team!</Link>!</Text>
+                                    <Text fontWeight='bold' color='brand.white' fontSize='lg'> Want to contribute? <Link href='/contribute' bg='brand.gray' _hover={{ color: 'brand.gold' }} p={1} rounded='md'>Join our team</Link>!</Text>
                                 )}
 
                                 {sheet == "contribute" && (

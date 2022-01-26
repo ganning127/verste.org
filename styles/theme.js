@@ -15,7 +15,11 @@ const theme = extendTheme({
 
         }
     },
-    initalColorMode: 'light',
+    fonts: {
+        heading: 'ABeeZee',
+        body: 'ABeeZee',
+    },
+    initalColorMode: 'Azee',
     useSystemColorMode: false
 })
 

@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^1.7.4",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
+    "@fontsource/abeezee": "^4.5.0",
     "formik": "^2.2.9",
     "framer-motion": "^3.10.6",
     "google-spreadsheet": "^3.2.0",
