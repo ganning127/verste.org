@@ -36,15 +36,15 @@ export const Benefits = ({ content }) => {
         items = [
             {
                 icon: BsBookHalf,
-                text: 'Read translated books',
+                text: 'Read simplified research papers, without needing the academic jargon.',
             },
             {
                 icon: FaPhotoVideo,
-                text: 'View accurately captioned videos',
+                text: 'Gain access to resources for understanding research topics.',
             },
             {
                 icon: MdOutlineSummarize,
-                text: 'Read long texts that have been simplified',
+                text: 'Save time and effort by reading research papers in a more intuitive way.',
             }
         ]
     }

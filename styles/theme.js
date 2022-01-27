@@ -12,13 +12,23 @@ const theme = extendTheme({
             "blue.dark": "#1D2559",
             "blue.deep": "#000840",
             "blue.light": "#bdc3f0"
-
+        },
+        brandLight: {
+            "black": "#15162A",
+            "white": "#FAFAFF",
+            "gray": "#30343F",
+            "blue": "#2A80C2",
+            "caroBlue": "#5E9FD2",
+            "lightBlue": "#92BDE1",
+            "lighterBlue": "#C6DCF0",
+            "lightYellow": "#F0E6B2",
+            "lighterYellow": "#F5F0D9"
         }
     },
-    fonts: {
-        heading: 'ABeeZee',
-        body: 'ABeeZee',
-    },
+    // fonts: {
+    //     heading: 'ABeeZee',
+    //     body: 'ABeeZee',
+    // },
     initalColorMode: 'Azee',
     useSystemColorMode: false
 })

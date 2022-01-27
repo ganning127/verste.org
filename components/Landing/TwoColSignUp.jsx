@@ -7,13 +7,13 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
     const [submitted, setSubmitted] = useState(false)
     const [loading, setLoading] = useState(false)
 
-    let gradient;
+    let bg;
 
     if (sheet === 'general') {
-        gradient = 'linear(to-r, brand.blue.deep, brand.blue.dark)'
+        bg = 'brandLight.caroBlue'
     }
     else {
-        gradient = 'linear(to-r, brand.black, brand.blue.deep)'
+        bg = 'brandLight.black'
     }
 
 
@@ -44,13 +44,13 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
 
 
     return (
-        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={0} bgGradient={gradient} bgRepeat="repeat" bgSize="cover" minH='100vh'>
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={0} bg={bg} minH='100vh'>
             <Box textAlign={{ base: 'center', lg: 'left' }} p={4} >
 
-                <Link href="/" >
+                <Link href="/" _hover={{}}>
                     <FadeIn delay={0.2}>
-                        <Heading color="brand.white" fontSize="4xl" fontWeight='black' d='inline' transition='all 0.4s' _hover={{ color: 'brand.gold' }}>Verste</Heading>
-                        {sheet == 'contribute' && <Heading color="brand.gold" fontSize="4xl" fontWeight='black' d='inline'> Contributor</Heading>}
+                        <Heading color="brand.white" fontSize="4xl" fontWeight='black' d='inline' transition='all 0.4s' _hover={{ color: 'brandLight.lightYellow' }}>Verste</Heading>
+                        {sheet == 'contribute' && <Heading color="brandLight.lightYellow" fontSize="4xl" fontWeight='black' d='inline'> Contributor</Heading>}
                     </FadeIn>
                 </Link>
 
@@ -60,18 +60,18 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
                         <Box>
                             <FadeIn delay={0.6}>
                                 {sheet == "general" && (
-                                    <Text fontWeight='bold' color='brand.white' fontSize='lg'> Want to contribute? <Link href='/contribute' bg='brand.gray' _hover={{ color: 'brand.gold' }} p={1} rounded='md'>Join our team</Link>!</Text>
+                                    <Text fontWeight='bold' color='brand.white' fontSize='lg'> Want to contribute? <Link href='/contribute' bg='brandLight.lightYellow' _hover={{ color: 'brandLight.lightBlue' }} p={1} rounded='md' color="brandLight.gray">Join our team</Link>!</Text>
                                 )}
 
                                 {sheet == "contribute" && (
-                                    <Text fontWeight='bold' color='brand.white' fontSize='lg'>Want to join as a reader? <Link href='/' bg='brand.blue' _hover={{ color: 'brand.gold' }} p={1} rounded='md'>click here</Link>!</Text>
+                                    <Text fontWeight='bold' color='brand.white' fontSize='lg'>Want to join as a reader? <Link href='/' bg='brandLight.lightYellow' _hover={{ color: 'brandLight.lightBlue' }} p={1} rounded='md' color="brandLight.gray">click here</Link>!</Text>
                                 )}
                             </FadeIn>
                         </Box>
 
                         <FadeIn delay={1.0}>
                             <Text fontSize={{ base: '4xl', md: '5xl' }} color='brand.white' fontWeight='bold'>
-                                <chakra.span >{title1}</chakra.span> <chakra.span transition='all 0.2s' color="#ffc020">{title2}</chakra.span> <chakra.span> {title3}</chakra.span>
+                                <chakra.span >{title1}</chakra.span> <chakra.span transition='all 0.2s' color="brandLight.lightYellow">{title2}</chakra.span> <chakra.span> {title3}</chakra.span>
                             </Text>
                         </FadeIn>
 
@@ -88,7 +88,7 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
                                     {
                                         tabs.map((tab, i) => {
                                             return (
-                                                <Tab fontWeight="bold" _selected={{ bg: 'brand.gray', color: 'brand.gold' }} _focus={{}} rounded='md' fontSize='lg' key={i}>{tab}</Tab>
+                                                <Tab fontWeight="bold" _selected={{ bg: 'brandLight.blue', color: 'brandLight.lightYellow' }} _focus={{}} rounded='md' fontSize='lg' key={i}>{tab}</Tab>
                                             )
                                         })
                                     }

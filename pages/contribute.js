@@ -17,10 +17,10 @@ export default function Contribute() {
             </Head>
 
             <TwoColSignUp
-                title1="Translate."
-                title2="Transcribe."
-                title3="Simplify."
-                desc1="Make an impact on your community."
+                title1="Make"
+                title2="an"
+                title3="Impact"
+                desc1="Volunteer with us!"
                 desc2="Join the waitlist for our private beta to get early access"
                 sheet="contribute"
                 pic='/books.jpeg'

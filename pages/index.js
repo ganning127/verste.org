@@ -21,10 +21,10 @@ export default function Home() {
       </Head>
 
       <TwoColSignUp
-        title1="Free."
-        title2="Translated."
+        title1="Free"
+        title2="Research"
         title3="Simplified."
-        desc1="Read translated books, view captioned videos, and read summarized works!"
+        desc1="Read simplified research papers, articles, and more."
         desc2="Sign up to get early access!"
         sheet="general"
         pic='/landing.jpeg'
