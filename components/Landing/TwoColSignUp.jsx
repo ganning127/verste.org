@@ -183,7 +183,7 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
 
 
                         <ScaleFade in={submitted} initialScale={0.1}>
-                            <Box transition='all 0.1s' bg='brand.blue.dark' rounded='md' p={2} mt="10">
+                            <Box transition='all 0.1s' bg='brandLight.blue' rounded='md' p={2} mt="10">
                                 <Text fontSize="xl" fontWeight='bold' color="white" >
                                     Thanks! We&apos;ll see you soon 👋
                                 </Text>
