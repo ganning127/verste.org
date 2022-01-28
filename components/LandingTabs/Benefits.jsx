@@ -1,8 +1,8 @@
 import {
-    Box, Text, List,
+    Box,
+    Text,
     ListItem,
     ListIcon,
-    OrderedList,
     UnorderedList,
 } from '@chakra-ui/react'
 import { MdVolunteerActivism, MdWork, MdOutlineSummarize } from 'react-icons/md'
@@ -16,7 +16,7 @@ export const Benefits = ({ content }) => {
         items = [
             {
                 icon: MdVolunteerActivism,
-                text: 'Earn volunteer hours',
+                text: 'Earn service hours',
             },
             {
                 icon: RiCommunityFill,
@@ -55,7 +55,7 @@ export const Benefits = ({ content }) => {
             <Text fontSize='lg' fontWeight='semibold'>
                 By joining Verste, you&apos;ll be able to:
             </Text>
-            <UnorderedList mt={1} fontWeight='semibold'>
+            <UnorderedList mt={1} fontWeight='semibold' styleType='none'>
                 {items.map((item, index) => (
                     <ListItem key={index} fontSize='lg'>
                         <ListIcon as={item.icon} d='inline' />

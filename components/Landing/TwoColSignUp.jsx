@@ -1,4 +1,4 @@
-import { SimpleGrid, Heading, Link, Input, FormControl, Text, Box, Img, Flex, chakra, Button, Tabs, TabList, TabPanels, Tab, TabPanel, ScaleFade } from "@chakra-ui/react"
+import { SimpleGrid, Heading, Link, Input, FormControl, Text, Box, Flex, chakra, Button, Tabs, TabList, TabPanels, Tab, TabPanel, ScaleFade } from "@chakra-ui/react"
 import { FadeIn } from '../animations/FadeIn'
 import { Formik, Form } from "formik";
 import React, { useState } from "react"
@@ -60,11 +60,11 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
                         <Box>
                             <FadeIn delay={0.6}>
                                 {sheet == "general" && (
-                                    <Text fontWeight='bold' color='brand.white' fontSize='lg'> Want to contribute? <Link href='/contribute' bg='brandLight.lightYellow' _hover={{ color: 'brandLight.lightBlue' }} p={1} rounded='md' color="brandLight.gray">Join our team</Link>!</Text>
+                                    <Text fontWeight='bold' color='brand.white' fontSize='xl'>Want to <Link href='/contribute' bg='brandLight.blue' _hover={{ color: 'brandLight.lightYellow' }} p={1} rounded='md' color="brandLight.white">contribute?</Link></Text>
                                 )}
 
                                 {sheet == "contribute" && (
-                                    <Text fontWeight='bold' color='brand.white' fontSize='lg'>Want to join as a reader? <Link href='/' bg='brandLight.lightYellow' _hover={{ color: 'brandLight.lightBlue' }} p={1} rounded='md' color="brandLight.gray">click here</Link>!</Text>
+                                    <Text fontWeight='bold' color='brand.white' fontSize='xl'>Want to join as a <Link href='/' bg='brandLight.blue' _hover={{ color: 'brandLight.lightYellow' }} p={1} rounded='md' color="brandLight.white">reader?</Link></Text>
                                 )}
                             </FadeIn>
                         </Box>
@@ -77,7 +77,7 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
 
 
                         <FadeIn delay={1.4}>
-                            <Text color="brand.white" fontSize='2xl' maxW='600px' fontWeight="semibold" my={3}>
+                            <Text color="brand.white" fontSize='2xl' maxW='600px' fontWeight="semibold" mx={{ base: 'auto', lg: '0' }} mb={3}>
                                 {desc1}
                             </Text>
                         </FadeIn>
@@ -88,7 +88,7 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
                                     {
                                         tabs.map((tab, i) => {
                                             return (
-                                                <Tab fontWeight="bold" _selected={{ bg: 'brandLight.blue', color: 'brandLight.lightYellow' }} _focus={{}} rounded='md' fontSize='lg' key={i}>{tab}</Tab>
+                                                <Tab fontWeight="bold" _selected={{ bg: 'brandLight.blue', color: 'brandLight.lightYellow' }} _focus={{}} rounded='md' fontSize='lg' py={1} key={i}>{tab}</Tab>
                                             )
                                         })
                                     }
@@ -154,7 +154,7 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
                                                     roundedStart={{
                                                         md: '0',
                                                     }}
-                                                    bg="brand.blue.dark"
+                                                    bg="brandLight.blue"
                                                     color="white"
                                                     fontWeight="bold"
                                                     transition='all 0.4s'
