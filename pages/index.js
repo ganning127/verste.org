@@ -5,7 +5,7 @@ import { Contact } from '../components/LandingTabs/Contact'
 import { NextSeo } from 'next-seo';
 
 const url = 'https://verste.org'
-const title = 'Verste – Free Books Translated'
+const title = 'Verste – Free Simplified Research'
 const description = "Verste is an open-source platform where experienced scholars volunteer their time to simplify academic-heavy research in areas ranging from computer science to biology and economics into easy-to-understand versions."
 
 export default function Home() {
