@@ -55,7 +55,7 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
                 </Link>
 
 
-                <Flex alignItems="center" maxW='700px' mx='auto' minH='80vh' mt={16}  >
+                <Flex alignItems="center" maxW='700px' mx='auto' minH='80vh' mt={16} justifyContent='center' >
                     <Box>
                         <Box>
                             <FadeIn delay={0.6}>
@@ -83,7 +83,7 @@ export const TwoColSignUp = ({ title1, title2, title3, desc1, desc2, sheet, pic,
                         </FadeIn>
 
                         <FadeIn delay={1.8}>
-                            <Tabs size='md' variant='unstyled' mt={10} color='brand.white'>
+                            <Tabs size='md' variant='unstyled' mt={10} color='brand.white' mx='auto'>
                                 <TabList justifyContent={{ base: 'center', lg: "start" }}>
                                     {
                                         tabs.map((tab, i) => {

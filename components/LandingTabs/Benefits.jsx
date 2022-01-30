@@ -16,27 +16,25 @@ export const Benefits = ({ content }) => {
         items = [
             {
                 icon: MdVolunteerActivism,
-                text: 'Earn service hours',
+                text: 'Earn service hours for your contributions',
             },
             {
                 icon: RiCommunityFill,
-                text: 'Get involved in community',
-            },
-            {
-                icon: IoFootstepsSharp,
-                text: 'Make a difference',
+                text: 'Gain knowledge and research experience',
             },
             {
                 icon: MdWork,
-                text: 'Gain real-world work experience',
+                text: 'Get involved in community and make a difference',
             }
         ]
+
+
     }
     else {
         items = [
             {
                 icon: BsBookHalf,
-                text: 'Read simplified research papers, without needing the academic jargon.',
+                text: 'Read simplified research papers, without the academic jargon.',
             },
             {
                 icon: FaPhotoVideo,
