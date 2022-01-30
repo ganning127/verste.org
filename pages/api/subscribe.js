@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         <br />
         <br />
 
-        We are so excited that you are interested in Verste! Our goal is simple: allow users to translate books, simplify hard-to-read texts, and transcribe videos for volunteer hours! Our team is working hard on Verste, please follow us on social media for updates.  We are also accepting new <a href="https://verste.org/contribute" target="_blank">contributors</a>!
+        We are so excited that you are interested in Verste! Our goal is simple: We're an open-source platform where experienced scholars volunteer their time to simplify academic-heavy research in areas ranging from computer science to biology and economics into easy-to-understand versions. Please follow us on social media for updates.  We are also accepting new <a href="https://verste.org/contribute" target="_blank">contributors</a>!
 
         <br />
         <br />
