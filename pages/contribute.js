@@ -13,32 +13,15 @@ const description =
 export default function Contribute() {
   return (
     <>
-      <NextSeo
-        title={title}
-        description={description}
-        canonical={url}
-        openGraph={{
-          url,
-          title,
-          description,
-        }}
-      />
-
-      <TwoColSignUp
-        title1="Make"
-        title2="an"
-        title3="Impact"
-        desc1="Volunteer with us!"
-        desc2="Sign up for early access!"
-        sheet="contribute"
-        pic="/computer.jpeg"
-        tabs={["About", "Benefits", "Contact"]}
-        tabsContent={[
-          <About key={1} />,
-          <Benefits key={2} content="contribute" />,
-          <Contact key={3} />,
-        ]}
-      />
+      <Head>
+        <title>Contribute - Verste</title>
+        <meta
+          httpEquiv="refresh"
+          content="0;URL='https://docs.google.com/forms/d/e/1FAIpQLSfeCsXbniP7Kr4U1sX9aI4GjKWfQL1x-SzkTsee8r0Z7N17uA/viewform?usp=sf_link'"
+        />
+        <meta property="og:site_name" content="verste.org" />
+        <meta property="og:type" content="website" />
+      </Head>
     </>
   );
 }
