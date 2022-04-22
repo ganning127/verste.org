@@ -1,6 +1,13 @@
-import { Box, SimpleGrid, Img, Button, Text } from "@chakra-ui/react";
+import { Box, SimpleGrid, Img, Button, Text, HStack } from "@chakra-ui/react";
 
-export const TextButtonPic = ({ desc, button1, href1, img }) => {
+export const TextButtonPic = ({
+  desc,
+  button1,
+  href1,
+  button2,
+  href2,
+  img,
+}) => {
   return (
     <SimpleGrid
       columns={{ base: 1, lg: 2 }}
@@ -12,23 +19,43 @@ export const TextButtonPic = ({ desc, button1, href1, img }) => {
         <Text fontSize="xl" color="brandLight.gray" mb={4}>
           {desc}
         </Text>
-        <Button
-          as="a"
-          href={href1}
-          bg="brandLight.caroBlue"
-          _hover={{
-            bg: "brandLight.blue",
-          }}
-          transition="all 0.2s"
-          color="white"
-          fontSize="lg"
-          fontWeight="semibold"
-          px={2}
-          py={1}
-          rounded="md"
-        >
-          {button1}
-        </Button>
+
+        <HStack>
+          <Button
+            as="a"
+            href={href1}
+            bg="brandLight.caroBlue"
+            _hover={{
+              bg: "brandLight.blue",
+            }}
+            transition="all 0.2s"
+            color="white"
+            fontSize="lg"
+            fontWeight="semibold"
+            px={2}
+            py={1}
+            rounded="md"
+          >
+            {button1}
+          </Button>
+          <Button
+            as="a"
+            bg="transparent"
+            href={href2}
+            color="brandLight.caroBlue"
+            _hover={{
+              color: "brandLight.blue",
+            }}
+            transition="all 0.2s"
+            fontSize="lg"
+            fontWeight="semibold"
+            px={2}
+            py={1}
+            rounded="md"
+          >
+            {button2}
+          </Button>
+        </HStack>
       </Box>
       <Box mx="auto">
         <Img src={img} alt="image" maxH="250px" />
