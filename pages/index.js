@@ -62,8 +62,10 @@ export default function Home() {
         <HeadingWithDesc>Made possible, by you</HeadingWithDesc>
         <TextButtonPic
           desc="Verste is a 501(c)(3) nonprofit organization dedicated to making research more accessible by creating simplified research papers. As such, we depend on the generous efforts by our contributors to make Verste possible. If you would like to help us out, please fill out the short application form found below! As a contributor, you'll be able to simplify any research papers you'd like, including papers that you've read before, or papers that you're tackling from scratch. Additionally, you'll be contributing to the scientific community, making research more accessible for those without previous experiences in this topic."
-          button1="Contribute"
+          button1="About Contributors"
           href1="/contribute"
+          button2="Apply Now"
+          href2="/contribute/apply"
           img="/logo.png"
         />
         <MedSep />
