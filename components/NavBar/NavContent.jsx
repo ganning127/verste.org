@@ -25,6 +25,10 @@ const links = [
     label: "Contribute",
     href: "/contribute",
   },
+  {
+    label: "Contact Us",
+    href: "mailto:hello@verste.org",
+  },
 ];
 
 const MobileNavContent = (props) => {
@@ -49,7 +53,7 @@ const MobileNavContent = (props) => {
           ))}
 
           <NavListItem>
-            <NavLink.Mobile href="https://verste.herokuapp.com/">
+            <NavLink.Mobile href="https://wiki.verste.org/">
               <Text as="span">Start Reading</Text>
               <Icon ml="2" as={AiOutlineRight} fontSize="xl" color="#FFC020" />
             </NavLink.Mobile>

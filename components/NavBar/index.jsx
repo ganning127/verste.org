@@ -24,7 +24,7 @@ export const NavBar = () => {
       pt="1"
       position="sticky"
       top="0"
-      zIndex="100"
+      zIndex={999999}
     >
       <Box as="header" height="16" position="relative" color="white">
         <Box
@@ -78,7 +78,7 @@ export const NavBar = () => {
               }}
             >
               <Link
-                href="https://verste.herokuapp.com/"
+                href="https://wiki.verste.org/"
                 bg="rgba(94, 159, 210, 0.8)"
                 _hover={{
                   bg: "brandLight.caroBlue",
