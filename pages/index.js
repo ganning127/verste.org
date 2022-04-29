@@ -29,14 +29,15 @@ export default function Home() {
       <Box id="landing-box">
         <NavBar />
 
+        <SmSep />
         <Container maxW="container.xl">
           <HomeLanding
             desc="Verste is a 501(c)(3) nonprofit organization dedicated to making research more accessible by creating simplified research papers."
             button1="Start Reading"
-            href1="https://verste.herokuapp.com/"
+            href1="https://wiki.verste.org/"
             button2="About Us"
             href2="/about"
-            img=""
+            img="/landing.png"
           />
         </Container>
 

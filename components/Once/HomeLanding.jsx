@@ -10,7 +10,7 @@ import {
 
 export const HomeLanding = ({ desc, button1, href1, button2, href2, img }) => {
   return (
-    <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10} alignItems="center">
+    <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={5} alignItems="center">
       <Box>
         <Heading
           as="h1"
@@ -72,7 +72,7 @@ export const HomeLanding = ({ desc, button1, href1, button2, href2, img }) => {
         </HStack>
       </Box>
       <Box>
-        <Img src="/verste_landing.png" />
+        <Img src={img} />
       </Box>
     </SimpleGrid>
   );
