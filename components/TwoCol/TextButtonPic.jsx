@@ -16,11 +16,16 @@ export const TextButtonPic = ({
       justifyContent="center"
     >
       <Box mx="auto">
-        <Text fontSize="xl" color="brandLight.gray" mb={4}>
+        <Text
+          fontSize="xl"
+          color="brandLight.gray"
+          textAlign={{ base: "center", lg: "left" }}
+          mb={4}
+        >
           {desc}
         </Text>
 
-        <HStack>
+        <HStack justifyContent={{ base: "center", lg: "flex-start" }}>
           <Button
             as="a"
             href={href1}
@@ -58,7 +63,12 @@ export const TextButtonPic = ({
         </HStack>
       </Box>
       <Box mx="auto">
-        <Img src={img} alt="image" maxH="250px" />
+        <Img
+          src={img}
+          alt="image"
+          maxH="250px"
+          d={{ base: "none", lg: "block" }}
+        />
       </Box>
     </SimpleGrid>
   );

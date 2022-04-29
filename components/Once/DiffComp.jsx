@@ -3,7 +3,7 @@ import { AiFillCheckCircle } from "react-icons/ai";
 export const DiffComp = () => {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacingX={20} spacingY={5}>
-      <Box bg="white" textAlign="center" p={4} rounded="md" shadow="sm">
+      <Box bg="white" textAlign="center" p={4} rounded="md" shadow="md">
         <Text fontWeight="semibold" fontSize="2xl" color="brandLight.caroBlue">
           Simplified
         </Text>
@@ -29,7 +29,7 @@ export const DiffComp = () => {
           </Box>
         </HStack>
       </Box>
-      <Box bg="white" textAlign="center" p={4} rounded="md" shadow="sm">
+      <Box bg="white" textAlign="center" p={4} rounded="md" shadow="">
         <Text fontWeight="semibold" fontSize="2xl" color="brandLight.red">
           Original
         </Text>

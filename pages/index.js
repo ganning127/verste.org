@@ -7,7 +7,9 @@ import { Box, Container, Text } from "@chakra-ui/react";
 import { HeadingWithDesc } from "../components/Headings/HeadingWithDesc";
 import { DiffComp } from "../components/Once/DiffComp";
 import { Footer } from "../components/Footer/index.tsx";
-import { TextButtonPic } from "../components/TwoCol/TextButtonPic";
+import { TextWithButtons } from "../components/Sections/TextWithButtons";
+import { ByTheNumbers } from "../components/Once/ByTheNumbers";
+
 const url = "https://verste.org";
 const title = "Verste – Free Simplified Research";
 const description =
@@ -44,24 +46,16 @@ export default function Home() {
         <MedSep />
       </Box>
       <Container maxW="container.xl">
-        <HeadingWithDesc>
-          Less{" "}
-          <Text as="span" color="brandLight.red">
-            time
-          </Text>
-          . More{" "}
-          <Text as="span" color="brandLight.caroBlue">
-            info
-          </Text>
-          .
-        </HeadingWithDesc>
+        <HeadingWithDesc>Less time. More info.</HeadingWithDesc>
 
         <DiffComp />
 
         <MedSep />
-
+        <HeadingWithDesc>By the Numbers</HeadingWithDesc>
+        <ByTheNumbers />
+        <MedSep />
         <HeadingWithDesc>Made possible, by you</HeadingWithDesc>
-        <TextButtonPic
+        <TextWithButtons
           desc="Verste is a 501(c)(3) nonprofit organization dedicated to making research more accessible by creating simplified research papers. As such, we depend on the generous efforts by our contributors to make Verste possible. If you would like to help us out, please fill out the short application form found below! As a contributor, you'll be able to simplify any research papers you'd like, including papers that you've read before, or papers that you're tackling from scratch. Additionally, you'll be contributing to the scientific community, making research more accessible for those without previous experiences in this topic."
           button1="About Contributors"
           href1="/contribute"

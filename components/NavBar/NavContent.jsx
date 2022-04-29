@@ -35,7 +35,13 @@ const MobileNavContent = (props) => {
   const { isOpen, onToggle } = useDisclosure();
   return (
     <Box {...props}>
-      <Center as="button" p="2" fontSize="2xl" onClick={onToggle} color="white">
+      <Center
+        as="button"
+        p="2"
+        fontSize="2xl"
+        onClick={onToggle}
+        color="gray.600"
+      >
         {isOpen ? <HiX /> : <HiOutlineMenu />}
       </Center>
       <NavList

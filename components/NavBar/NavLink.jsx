@@ -25,7 +25,7 @@ const MobileNavLink = (props) => {
       fontWeight="bold"
       py="5"
       fontSize="lg"
-      color="white"
+      color="gray.600"
       w="full"
       _hover={{
         bg: "blackAlpha.200",
