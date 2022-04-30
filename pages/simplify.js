@@ -165,8 +165,8 @@ export default function Simplify() {
                   <Text fontWeight="bold">Main Points:</Text>
 
                   <UnorderedList>
-                    {bullets.map((bullet) => (
-                      <ListItem>{bullet}</ListItem>
+                    {bullets.map((bullet, i) => (
+                      <ListItem key={i}>{bullet}</ListItem>
                     ))}
                   </UnorderedList>
                 </Box>
