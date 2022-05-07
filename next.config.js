@@ -20,7 +20,7 @@ module.exports = {
       {
         source: "/contribute",
         destination:
-          "https://verste.notion.site/Contributors-5fadaf05f79f4cfdac975bcf123ca98c",
+          "https://verste.notion.site/Verste-Contributors-862f399e67c24f35a3a256904d28d368",
         permanent: false,
       },
       {
