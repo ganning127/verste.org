@@ -1,6 +1,15 @@
-import { Box, SimpleGrid, Img, Button, Text, HStack } from "@chakra-ui/react";
+import {
+  Heading,
+  Box,
+  SimpleGrid,
+  Img,
+  Button,
+  Text,
+  HStack,
+} from "@chakra-ui/react";
 
-export const TextButtonPic = ({
+export const HeadWithPic = ({
+  title,
   desc,
   button1,
   href1,
@@ -15,17 +24,20 @@ export const TextButtonPic = ({
       alignItems="center"
       justifyContent="center"
     >
-      <Box mx="auto">
+      <Box mx="auto" textAlign="center">
+        <Heading fontSize="6xl" color="brandLight.gray">
+          {title}
+        </Heading>
         <Text
-          fontSize="xl"
+          fontSize={{ base: "md", lg: "lg" }}
           color="brandLight.gray"
-          textAlign={{ base: "center", lg: "left" }}
+          textAlign="center"
           mb={4}
         >
           {desc}
         </Text>
 
-        <HStack justifyContent={{ base: "center", lg: "flex-start" }}>
+        <HStack justifyContent="center" spacing={8}>
           <Button
             as="a"
             href={href1}
@@ -37,9 +49,11 @@ export const TextButtonPic = ({
             color="white"
             fontSize="lg"
             fontWeight="semibold"
-            px={2}
+            px={5}
             py={1}
             rounded="md"
+            shadow="lg"
+            target="_blank"
           >
             {button1}
           </Button>
@@ -63,12 +77,7 @@ export const TextButtonPic = ({
         </HStack>
       </Box>
       <Box mx="auto">
-        <Img
-          src={img}
-          alt="image"
-          maxH="250px"
-          d={{ base: "none", lg: "block" }}
-        />
+        <Img src={img} alt="image" maxH="300px" rounded="md" shadow="lg" />
       </Box>
     </SimpleGrid>
   );

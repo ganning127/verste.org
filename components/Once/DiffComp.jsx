@@ -7,7 +7,7 @@ export const DiffComp = () => {
         <Text fontWeight="semibold" fontSize="2xl" color="brandLight.caroBlue">
           Simplified
         </Text>
-        <Text fontSize="lg" color="brandLight.text">
+        <Text fontSize={{ base: "md", md: "lg" }} color="brandLight.text">
           By studying different animals, we can investigate the biological
           causes of cravings. From parasites to monkeys, many species all show a
           drive for ethanol. While mice are usually used to study an
@@ -33,7 +33,7 @@ export const DiffComp = () => {
         <Text fontWeight="semibold" fontSize="2xl" color="brandLight.red">
           Original
         </Text>
-        <Text fontSize="lg" color="brandLight.gray">
+        <Text fontSize={{ base: "md", md: "lg" }} color="brandLight.gray">
           Model systems provide the opportunity to characterize the biology
           underlying cue-induced cravings. Memory for ethanol associated cues
           are demonstrated in a wide range of species, from nematodes to

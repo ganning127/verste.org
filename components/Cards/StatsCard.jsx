@@ -10,7 +10,12 @@ export const StatsCard = ({ title, num, desc, color }) => {
         {num}+
       </Text>
 
-      <Text as="p" fontSize="md" fontWeight="normal" color="brandLight.gray">
+      <Text
+        as="p"
+        fontSize={{ base: "md", md: "lg" }}
+        fontWeight="normal"
+        color="brandLight.gray"
+      >
         {desc}
       </Text>
     </Box>

@@ -27,6 +27,9 @@ const GlobalStyle = ({ children }) => {
               rgba(250, 250, 255, 1) 67%
             );
           }
+          #navbar {
+            background-color: rgb(198, 220, 240);
+          }
         `}
       />
       {children}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Ganning Xu",
+    "title": "Project Manager",
+    "desc": "Hi there! I’m a current high school junior at the North Carolina School of Science and Mathematics. I cofounded Verste because of my experience reading research papers. Many of the words were so difficult that it was hard for me to even understand a general summary of the paper. Verste is here to change that! Fun Fact: I love eating food.",
+    "img": "/team/ganning.jpg"
+  },
+  {
+    "name": "Roxanne Egamino",
+    "title": "Logstics & Outreach",
+    "desc": "Hello, I’m Roxanne Egamino! I’m currently a junior at Apex Friendship. I like traveling and listening to music! Fun fact: I visited every state along the east coast except for Maine.",
+    "img": "/team/roxanne.jpeg"
+  },
+  {
+    "name": "Ivan Zheng",
+    "title": "Marketing Lead",
+    "desc": "Hello, my name is Ivan Zheng. I am a junior at the North Carolina School of Science and Mathematics. I like coding, and using photoshop! Math is also cool but I'm bad at it. I hope you enjoy using Verste!",
+    "img": "/team/ivan.png"
+  },
+  {
+    "name": "Jacob Van Meter",
+    "title": "Developer",
+    "desc": "Hey, I’m Jacob Van Meter, a junior at NCSSM who likes coding and helping out with Verste. I mainly work on research around modeling, control, and state estimation!",
+    "img": "/team/jacob.jpeg"
+  },
+  {
+    "name": "Jessica Fan",
+    "title": "Marketing",
+    "desc": "Hey, I’m Jacob Van Meter, a junior at NCSSM who likes coding and helping out with Verste. I mainly work on research around modeling, control, and state estimation!",
+    "img": "/team/jessica.png"
+  }
+]

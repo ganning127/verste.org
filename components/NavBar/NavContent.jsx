@@ -26,8 +26,12 @@ const links = [
     href: "/contribute",
   },
   {
-    label: "Contact Us",
-    href: "mailto:hello@verste.org",
+    label: "Intern",
+    href: "/intern",
+  },
+  {
+    label: "Simplify",
+    href: "/simplify",
   },
 ];
 

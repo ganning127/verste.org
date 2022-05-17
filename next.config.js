@@ -23,12 +23,6 @@ module.exports = {
           "https://verste.notion.site/Verste-Contributors-862f399e67c24f35a3a256904d28d368",
         permanent: false,
       },
-      {
-        source: "/about",
-        destination:
-          "https://verste.notion.site/About-Verste-e03cb661bdcb43efa87b41b4cdfd1b0c",
-        permanent: false,
-      },
     ];
   },
 };

@@ -26,10 +26,6 @@ const theme = extendTheme({
       red: "#FF7C7C",
     },
   },
-  // fonts: {
-  //     heading: 'ABeeZee',
-  //     body: 'ABeeZee',
-  // },
   initalColorMode: "Azee",
   useSystemColorMode: false,
 });

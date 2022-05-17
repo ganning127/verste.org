@@ -2,9 +2,8 @@ import { Box, Flex, Text, Img, Link, Icon } from "@chakra-ui/react";
 import * as React from "react";
 import { NavContent } from "./NavContent";
 import { useEffect, useState } from "react";
-import { AiOutlineRight } from "react-icons/ai";
 
-export const NavBar = () => {
+export const NavBar = ({ bg }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -20,16 +19,18 @@ export const NavBar = () => {
   }, []);
   return (
     <Box
-      bg={scrollPosition == 0 ? "transparent" : "brandLight.lighterBlue"}
-      pt="1"
+      bg={bg ? bg : scrollPosition == 0 ? "transparent" : "white !important"}
+      py="4"
       position="sticky"
       top="0"
-      zIndex={999999}
+      id="navbar"
+      transition="all 0.4s"
+      zIndex={100}
     >
-      <Box as="header" height="16" position="relative" color="white">
+      <Box as="header" position="relative" color="white">
         <Box
           height="100%"
-          // mx="auto"
+          mx="auto"
           px={{
             base: "8",
             md: "8",
@@ -46,7 +47,7 @@ export const NavBar = () => {
             justify="space-between"
             height="100%"
           >
-            <Box d="flex" alignItems="center">
+            <Box d="flex" alignItems="center" as="a" href="/">
               <Img src="/logo.png" h="12" display="inline" mr="3" />
               <Text
                 as="h1"
@@ -90,12 +91,6 @@ export const NavBar = () => {
                 alignItems="center"
               >
                 <Text as="span">Start Reading</Text>
-                <Icon
-                  ml="2"
-                  as={AiOutlineRight}
-                  fontSize="xl"
-                  color="#FFC020"
-                />
               </Link>
             </Box>
           </Flex>
