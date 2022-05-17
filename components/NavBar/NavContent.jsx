@@ -7,6 +7,7 @@ import {
   Link,
   Text,
   Icon,
+  Badge,
   useDisclosure,
 } from "@chakra-ui/react";
 import * as React from "react";
@@ -22,16 +23,20 @@ const links = [
     href: "/about",
   },
   {
+    label: (
+      <Text>
+        Simplify <Badge colorScheme="teal">Beta</Badge>
+      </Text>
+    ),
+    href: "/simplify",
+  },
+  {
     label: "Contribute",
     href: "/contribute",
   },
   {
     label: "Intern",
     href: "/intern",
-  },
-  {
-    label: "Simplify",
-    href: "/simplify",
   },
 ];
 
@@ -51,7 +56,7 @@ const MobileNavContent = (props) => {
       <NavList
         pos="absolute"
         insetX="0"
-        bg="brandLight.lighterBlue"
+        bg="white"
         top="64px"
         animate={isOpen ? "enter" : "exit"}
       >

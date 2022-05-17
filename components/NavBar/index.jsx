@@ -65,12 +65,26 @@ export const NavBar = ({ bg }) => {
                 base: "none",
                 md: "flex",
               }}
+              bg={
+                bg
+                  ? bg
+                  : scrollPosition == 0
+                  ? "transparent"
+                  : "white !important"
+              }
             />
             <NavContent.Mobile
               display={{
                 base: "flex",
                 md: "none",
               }}
+              bg={
+                bg
+                  ? bg
+                  : scrollPosition == 0
+                  ? "transparent"
+                  : "white !important"
+              }
             />
             <Box
               display={{

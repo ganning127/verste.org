@@ -11,6 +11,7 @@ import {
   FormControl,
   FormLabel,
   Input,
+  Heading,
   NumberInput,
   NumberInputStepper,
   UnorderedList,
@@ -23,9 +24,8 @@ import {
 import { HeadingWithDesc } from "../components/Headings/HeadingWithDesc";
 import { Footer } from "../components/Footer/index.tsx";
 import { useState } from "react";
-
 const url = "https://verste.org";
-const title = "Verste – Free Simplified Research";
+const title = "Simplify | Verste";
 const description =
   "Verste is an open-source platform where experienced scholars volunteer their time to simplify academic-heavy research in areas ranging from computer science to biology and economics into easy-to-understand versions.";
 
@@ -53,21 +53,29 @@ export default function Simplify() {
 
   const handleSimplify = async () => {
     setLoading(true);
-    if (paper === "" || question === "") {
-      alert("Please fill out both fields");
+    if (paper === "") {
+      alert("Please enter a paper");
       return;
+    }
+    let useQ = "";
+    console.log("question:", question);
+    if (question === "") {
+      useQ = "N/A";
+    } else {
+      useQ = question;
     }
 
     const resp = await fetch("/api/simplify", {
       method: "POST",
       body: JSON.stringify({
         paper,
-        question,
+        question: useQ,
         num,
       }),
     });
 
     const data = await resp.json();
+    console.log(data);
     setResponded(true);
     setSummary(data.summary);
     setAnswer(data.answer);
@@ -76,7 +84,18 @@ export default function Simplify() {
   };
   return (
     <>
-      <NavBar />
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          url,
+          title,
+          description,
+        }}
+      />
+
+      <NavBar bg="#fafaff !important" />
 
       <SmSep />
 
@@ -99,7 +118,7 @@ export default function Simplify() {
                 />
               </FormControl>
 
-              <FormControl isRequired borderRadius="20" color="gray.900">
+              <FormControl borderRadius="20" color="gray.900">
                 <FormLabel htmlFor="lastname" color="blue.dark">
                   Type in a question (N/A if none)
                 </FormLabel>
@@ -130,6 +149,7 @@ export default function Simplify() {
 
               <Button
                 colorScheme="blue"
+                type="submit"
                 onClick={handleSimplify}
                 isLoading={loading}
                 loadingText="Working some magic..."
@@ -141,7 +161,22 @@ export default function Simplify() {
           </Box>
 
           <Box>
-            <HeadingWithDesc>Simplified</HeadingWithDesc>
+            <Heading
+              textAlign="center"
+              fontSize="5xl"
+              color="brandLight.caroBlue"
+            >
+              Simplified{" "}
+              <Text
+                as="span"
+                color="green.900"
+                bg="green.200"
+                rounded="lg"
+                px={4}
+              >
+                Beta
+              </Text>
+            </Heading>
 
             {responded && (
               <VStack justifyContent="flex-start">
