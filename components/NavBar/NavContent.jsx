@@ -56,8 +56,8 @@ const MobileNavContent = (props) => {
       <NavList
         pos="absolute"
         insetX="0"
-        bg="white"
-        top="64px"
+        bg="#fafaff"
+        top="48px"
         animate={isOpen ? "enter" : "exit"}
       >
         <Stack spacing="0">
@@ -70,7 +70,6 @@ const MobileNavContent = (props) => {
           <NavListItem>
             <NavLink.Mobile href="https://wiki.verste.org/">
               <Text as="span">Start Reading</Text>
-              <Icon ml="2" as={AiOutlineRight} fontSize="xl" color="#FFC020" />
             </NavLink.Mobile>
           </NavListItem>
 

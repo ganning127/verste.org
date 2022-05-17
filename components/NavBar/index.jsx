@@ -8,6 +8,7 @@ export const NavBar = ({ bg }) => {
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
+    console.log(position);
   };
 
   useEffect(() => {
@@ -19,13 +20,14 @@ export const NavBar = ({ bg }) => {
   }, []);
   return (
     <Box
-      bg={bg ? bg : scrollPosition == 0 ? "transparent" : "white !important"}
-      py="4"
+      bg={bg ? bg : scrollPosition == 0 ? "transparent" : "#fafaff !important"}
+      py={4}
       position="sticky"
+      shadow={scrollPosition == 0 ? "none" : "md"}
       top="0"
       id="navbar"
       transition="all 0.4s"
-      zIndex={100}
+      zIndex={999999}
     >
       <Box as="header" position="relative" color="white">
         <Box
@@ -48,7 +50,7 @@ export const NavBar = ({ bg }) => {
             height="100%"
           >
             <Box d="flex" alignItems="center" as="a" href="/">
-              <Img src="/logo.png" h="12" display="inline" mr="3" />
+              <Img src="/logo.png" h="10" display="inline" mr="3" />
               <Text
                 as="h1"
                 fontSize="3xl"
@@ -65,26 +67,12 @@ export const NavBar = ({ bg }) => {
                 base: "none",
                 md: "flex",
               }}
-              bg={
-                bg
-                  ? bg
-                  : scrollPosition == 0
-                  ? "transparent"
-                  : "white !important"
-              }
             />
             <NavContent.Mobile
               display={{
                 base: "flex",
                 md: "none",
               }}
-              bg={
-                bg
-                  ? bg
-                  : scrollPosition == 0
-                  ? "transparent"
-                  : "white !important"
-              }
             />
             <Box
               display={{
