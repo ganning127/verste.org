@@ -91,6 +91,7 @@ export const NavBar = ({ bg }) => {
                 rounded="md"
                 d="flex"
                 alignItems="center"
+                isExternal
               >
                 <Text as="span">Start Reading</Text>
               </Link>

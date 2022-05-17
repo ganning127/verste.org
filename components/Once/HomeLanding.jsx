@@ -59,6 +59,7 @@ export const HomeLanding = ({ desc, button1, href1, button2, href2, img }) => {
             px={2}
             py={1}
             rounded="md"
+            isExternal={href1.includes("http")}
           >
             {button1}
           </Link>
@@ -75,6 +76,7 @@ export const HomeLanding = ({ desc, button1, href1, button2, href2, img }) => {
             fontWeight="semibold"
             px={2}
             py={1}
+            isExternal={href2.includes("http")}
           >
             {button2}
           </Link>

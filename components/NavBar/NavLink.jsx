@@ -11,7 +11,7 @@ const DesktopNavLink = (props) => {
       borderBottom="2px"
       color="gray.600"
       borderColor="transparent"
-      transition="all 0.2s"
+      transition="all 0.4s"
       {...props}
     />
   );

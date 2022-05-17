@@ -52,7 +52,7 @@ export const HeadWithPic = ({
             px={5}
             py={1}
             rounded="md"
-            shadow="lg"
+            // shadow="lg"
             target="_blank"
           >
             {button1}
