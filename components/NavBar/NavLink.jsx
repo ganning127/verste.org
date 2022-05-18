@@ -9,9 +9,12 @@ const DesktopNavLink = (props) => {
       alignItems="center"
       justifyContent="center"
       borderBottom="2px"
-      color="gray.600"
       borderColor="transparent"
       transition="all 0.4s"
+      color="brandLight.gray"
+      _hover={{
+        color: "brandLight.blue",
+      }}
       {...props}
     />
   );

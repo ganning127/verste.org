@@ -89,14 +89,7 @@ const DesktopNavContent = (props) => {
   return (
     <HStack spacing="6" align="stretch" {...props}>
       {links.map((link, index) => (
-        <NavLink.Desktop
-          key={index}
-          href={link.href}
-          fontSize="xl"
-          _hover={{
-            color: "brandLight.black",
-          }}
-        >
+        <NavLink.Desktop key={index} href={link.href} fontSize="xl">
           {link.label}
         </NavLink.Desktop>
       ))}
