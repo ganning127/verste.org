@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { Footer } from "../components/Footer/index.tsx";
 import { HeadCenter } from "../components/Sections/HeadCenter";
-import { TextBlock } from "../components/Sections/Textblock";
+import { TextBlock } from "../components/Sections/TextBlock";
 import { AiOutlineCheck } from "react-icons/ai";
 const url = "https://verste.org";
 const title = "Intern | Verste";
