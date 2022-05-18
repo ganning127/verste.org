@@ -17,6 +17,12 @@ module.exports = {
           "https://docs.google.com/forms/d/e/1FAIpQLSfeCsXbniP7Kr4U1sX9aI4GjKWfQL1x-SzkTsee8r0Z7N17uA/viewform",
         permanent: false,
       },
+      {
+        source: "/intern/apply",
+        destination:
+          "https://docs.google.com/forms/d/e/1FAIpQLSe9B0iPoimxo46JXtLTwr3xnADWWJoMSgrrBWW2Tj7o3XJBhw/viewform",
+        permanent: false,
+      },
     ];
   },
 };
