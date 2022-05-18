@@ -17,12 +17,6 @@ module.exports = {
           "https://docs.google.com/forms/d/e/1FAIpQLSfeCsXbniP7Kr4U1sX9aI4GjKWfQL1x-SzkTsee8r0Z7N17uA/viewform",
         permanent: false,
       },
-      {
-        source: "/contribute",
-        destination:
-          "https://verste.notion.site/Verste-Contributors-862f399e67c24f35a3a256904d28d368",
-        permanent: false,
-      },
     ];
   },
 };

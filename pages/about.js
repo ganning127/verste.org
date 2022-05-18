@@ -107,7 +107,7 @@ export default function About() {
             <SimpleGrid columns={3} mt={4}>
               {sponsors.map((sponsor, index) => {
                 return (
-                  <Box as="a" href={sponsor.href} target="_blank">
+                  <Box as="a" href={sponsor.href} target="_blank" key={index}>
                     <Img src={sponsor.img} maxH="50px" />
                   </Box>
                 );

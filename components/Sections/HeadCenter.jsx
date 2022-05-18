@@ -55,42 +55,45 @@ export const HeadCenter = ({
       </Box>
 
       <HStack justifyContent="center">
-        <Button
-          as="a"
-          href={href1}
-          target={href1.includes("https") ? "_blank" : "_self"}
-          size="lg"
-          color="white"
-          bg="brandLight.caroBlue"
-          rounded="md"
-          px="8"
-          fontWeight="bold"
-          fontSize="md"
-          _hover={{
-            color: "white",
-            background: "brandLight.blue",
-          }}
-        >
-          {button1}
-        </Button>
+        {href1 && (
+          <Button
+            as="a"
+            href={href1}
+            target={href1.includes("https") ? "_blank" : "_self"}
+            color="white"
+            bg="brandLight.caroBlue"
+            rounded="md"
+            px="8"
+            fontWeight="bold"
+            fontSize="md"
+            _hover={{
+              color: "white",
+              background: "brandLight.blue",
+            }}
+          >
+            {button1}
+          </Button>
+        )}
 
-        <Button
-          as="a"
-          href={href2}
-          target={href2.includes("https") ? "_blank" : "_self"}
-          size="lg"
-          color="brandLight.caroBlue"
-          bg="transparent"
-          rounded="md"
-          px="8"
-          fontWeight="bold"
-          fontSize="md"
-          _hover={{
-            color: "brandLight.blue",
-          }}
-        >
-          {button2}
-        </Button>
+        {href2 && (
+          <Button
+            as="a"
+            href={href2}
+            target={href2.includes("https") ? "_blank" : "_self"}
+            size="lg"
+            color="brandLight.caroBlue"
+            bg="transparent"
+            rounded="md"
+            px="8"
+            fontWeight="bold"
+            fontSize="md"
+            _hover={{
+              color: "brandLight.blue",
+            }}
+          >
+            {button2}
+          </Button>
+        )}
       </HStack>
     </Stack>
   );

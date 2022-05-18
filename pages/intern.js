@@ -4,8 +4,6 @@ import { SmSep } from "../components/Separators/SmSep";
 import { MedSep } from "../components/Separators/MedSep";
 import {
   Box,
-  Button,
-  Img,
   Container,
   SimpleGrid,
   Text,
@@ -15,13 +13,8 @@ import {
   List,
   ListIcon,
   ListItem,
-  Icon,
 } from "@chakra-ui/react";
-import { HeadingWithDesc } from "../components/Headings/HeadingWithDesc";
 import { Footer } from "../components/Footer/index.tsx";
-import { TextWithButtons } from "../components/Sections/TextWithButtons";
-import { HeadWithPic } from "../components/TwoCol/HeadWithPic";
-import { TeamGrid } from "../components/Once/TeamGrid";
 import { HeadCenter } from "../components/Sections/HeadCenter";
 import { TextBlock } from "../components/Sections/Textblock";
 import { AiOutlineCheck } from "react-icons/ai";
@@ -59,7 +52,7 @@ export default function Intern() {
           href2="https://docs.google.com/document/d/1GU1KV7ql5dxkj_dkwGQz6cf1tda92QYGAW4l0rlFj3s/edit?usp=sharing"
         />
 
-        <MedSep line={true} />
+        <SmSep line={true} />
 
         <TextBlock
           title="What are Verste Design Interns?"
@@ -67,7 +60,7 @@ export default function Intern() {
           desc2="Our design internship is an 8-week virtual internship designed to guide you through project-based learning and build connections with other interns and our founders. This summer, join us as we launch our first cohort of design interns."
         />
 
-        <MedSep line={true} />
+        <SmSep line={true} />
 
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={16}>
           <Box>

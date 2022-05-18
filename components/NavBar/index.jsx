@@ -8,7 +8,6 @@ export const NavBar = ({ bg }) => {
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
-    console.log(position);
   };
 
   useEffect(() => {
@@ -82,7 +81,7 @@ export const NavBar = ({ bg }) => {
             >
               <Link
                 href="https://wiki.verste.org/"
-                bg="rgba(94, 159, 210, 0.8)"
+                bg="brandLight.caroBlue"
                 _hover={{
                   bg: "brandLight.caroBlue",
                 }}
