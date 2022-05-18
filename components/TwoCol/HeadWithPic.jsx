@@ -25,7 +25,7 @@ export const HeadWithPic = ({
       justifyContent="center"
     >
       <Box mx="auto" textAlign="center">
-        <Heading fontSize="6xl" color="brandLight.gray">
+        <Heading fontSize="6xl" fontWeight="extrabold" color="brandLight.gray">
           {title}
         </Heading>
         <Text

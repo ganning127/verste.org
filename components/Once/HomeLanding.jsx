@@ -21,7 +21,7 @@ export const HomeLanding = ({ desc, button1, href1, button2, href2, img }) => {
           as="h1"
           fontSize={{ base: "5xl", lg: "7xl" }}
           lineHeight={{ base: 1, lg: 1.2 }}
-          fontWeight="bold"
+          fontWeight="extrabold"
           color="brandLight.gray"
         >
           Free <br />

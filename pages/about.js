@@ -1,6 +1,5 @@
 import { NextSeo } from "next-seo";
 import { NavBar } from "../components/NavBar";
-import { HomeLanding } from "../components/Once/HomeLanding";
 import { SmSep } from "../components/Separators/SmSep";
 import { MedSep } from "../components/Separators/MedSep";
 import {
@@ -15,10 +14,8 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 import { HeadingWithDesc } from "../components/Headings/HeadingWithDesc";
-import { DiffComp } from "../components/Once/DiffComp";
 import { Footer } from "../components/Footer/index.tsx";
 import { TextWithButtons } from "../components/Sections/TextWithButtons";
-import { ByTheNumbers } from "../components/Once/ByTheNumbers";
 import { HeadWithPic } from "../components/TwoCol/HeadWithPic";
 import { TeamGrid } from "../components/Once/TeamGrid";
 const url = "https://verste.org";

@@ -22,14 +22,7 @@ const links = [
     label: "About",
     href: "/about",
   },
-  {
-    label: (
-      <Text>
-        Simplify <Badge colorScheme="teal">Beta</Badge>
-      </Text>
-    ),
-    href: "/simplify",
-  },
+
   {
     label: "Contribute",
     href: "/contribute",
@@ -37,6 +30,14 @@ const links = [
   {
     label: "Intern",
     href: "/intern",
+  },
+  {
+    label: (
+      <Text>
+        Simplify <Badge colorScheme="teal">Beta</Badge>
+      </Text>
+    ),
+    href: "/simplify",
   },
 ];
 
