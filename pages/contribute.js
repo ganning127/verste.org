@@ -50,9 +50,9 @@ export default function Contribute() {
           emph="Virtual & Ongoing"
           desc="Verste Contributors are essential in fulfill Verste's mission of creating simplified research papers. If you have previous research experience (either reading or writing), we'd love for you to join our team of contributors!"
           button1="Apply Now"
-          href1="/intern/apply"
+          href1="https://docs.google.com/forms/d/e/1FAIpQLSfeCsXbniP7Kr4U1sX9aI4GjKWfQL1x-SzkTsee8r0Z7N17uA/viewform"
           button2="Contributor Notion"
-          href2="https://docs.google.com/document/d/1GU1KV7ql5dxkj_dkwGQz6cf1tda92QYGAW4l0rlFj3s/edit?usp=sharing"
+          href2="https://verste.notion.site/Verste-Contributors-862f399e67c24f35a3a256904d28d368"
         />
 
         <MedSep line={true} />
