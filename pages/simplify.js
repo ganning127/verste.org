@@ -99,7 +99,7 @@ export default function Simplify() {
 
       <SmSep />
 
-      <Container maxW="container.xl">
+      <Container maxW="container.lg">
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
           <Box>
             <HeadingWithDesc>Original</HeadingWithDesc>

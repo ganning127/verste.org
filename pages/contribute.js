@@ -43,7 +43,7 @@ export default function Contribute() {
 
       <NavBar bg="#fafaff !important" />
       <SmSep />
-      <Container maxW="container.xl" mt="">
+      <Container maxW="container.lg" mt="">
         <HeadCenter
           img="/contributor-logo.png"
           title="Verste Contributor"

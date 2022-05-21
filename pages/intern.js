@@ -18,6 +18,9 @@ import { Footer } from "../components/Footer/index.tsx";
 import { HeadCenter } from "../components/Sections/HeadCenter";
 import { TextBlock } from "../components/Sections/TextBlock";
 import { AiOutlineCheck } from "react-icons/ai";
+import { WeekBreakdown } from "../components/TwoCol/WeekBreakdown";
+import { HeadingWithDesc } from "../components/Headings/HeadingWithDesc";
+
 const url = "https://verste.org";
 const title = "Intern | Verste";
 const description =
@@ -39,7 +42,7 @@ export default function Intern() {
 
       <NavBar bg="#fafaff !important" />
       <SmSep />
-      <Container maxW="container.xl" mt="">
+      <Container maxW="container.lg" mt="">
         <HeadCenter
           img="/intern-logo.png"
           title="Verste Design Internship 2022"
@@ -151,6 +154,61 @@ export default function Intern() {
           </Box>
         </SimpleGrid>
 
+        <SmSep line={true} />
+        <HeadingWithDesc desc="Here’s a breakdown of the general idea of what we’ll be covering each week throughout your internship! Please keep in mind that the schedule may change and everything is flexible!">
+          Week Breakdown
+        </HeadingWithDesc>
+        <Box>
+          <WeekBreakdown
+            title="Onboarding, Introductions, Setup"
+            week="Week 1"
+            desc="Welcome to week 1! Here, we’ll be going over everything you need to make the most of your Verste Design internship."
+            img="/week - 1.png"
+          />
+          <WeekBreakdown
+            title="Portfolio, Aspects of Engaging Instagram posts"
+            week="Week 2"
+            desc="You’ve made it to week 2! Now, we’ll be adding your Verste portfolio, which you’ll be using in your final presentation, and we’ll run through a quick workshop on how to create engaging Instagram posts."
+            img="/week - 2.png"
+          />
+          <WeekBreakdown
+            title="Web Prototyping using Figma"
+            week="Week 3"
+            desc="We are three weeks in! This week, we’ll be going over an important aspect of any designer's job, designing websites. Our goal for this week is to give you the tools and skills needed for you to create an engaging website."
+            img="/week - 3.png"
+          />
+          <WeekBreakdown
+            title="GIMP: Free Photo Editing and Manipulation"
+            week="Week 4"
+            desc="Halfway through the internship! This week, we’ll be running through a workshop on how to use GIMP, a free photo manipulator to re-create our logo and Instagram posts."
+            img="/week - 4.png"
+          />
+          <WeekBreakdown
+            title="Photoshop: Layers, Masks, Anything!"
+            week="Week 5"
+            desc="You’re in the home stretch now! We’ll be running through a photoshop workshop on how to manipulate images and create unique works of art. Please note that Photoshop IS a paid program, but there is a free trial that we will be using for our purposes."
+            img="/week - 5.png"
+          />
+          <WeekBreakdown
+            title="Color Theory"
+            week="Week 6"
+            desc="This week, we’ll be focusing on color theory. What is color theory? How can color theory be incorporated within the design to create appealing works that are visually pleasing?"
+            img="/week - 6.png"
+          />
+          <WeekBreakdown
+            title="Notion and Task Management"
+            week="Week 7"
+            desc="Second to last week! We’re almost there. This week, we’ll be going over task management and project management in general using Notion, a productivity app."
+            img="/week - 7.png"
+          />
+          <WeekBreakdown
+            title="Final Intern Presentations"
+            week="Week 8"
+            desc="This is our final week of the 2022 Verste Design Internship. This week, you’ll be presenting your work to the entire Verste core team. Feel free to create a slidedeck or show off your portfolio."
+            img="/week - 8.png"
+          />
+        </Box>
+
         <Text
           fontSize={{ base: "md", lg: "lg" }}
           fontStyle="italic"
@@ -172,8 +230,6 @@ export default function Intern() {
           </Link>
           !
         </Text>
-
-        <MedSep />
       </Container>
 
       <SmSep />

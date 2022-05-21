@@ -13,7 +13,12 @@ export const HeadingWithDesc = ({ desc, children, smaller }) => {
         {children}
       </Heading>
       {desc && (
-        <Text fontWeight="normal" color="brandLight.gray" fontSize="xl" my="3">
+        <Text
+          fontWeight="normal"
+          color="brandLight.gray"
+          fontSize={{ base: "md", lg: "lg" }}
+          my="3"
+        >
           {desc}
         </Text>
       )}
