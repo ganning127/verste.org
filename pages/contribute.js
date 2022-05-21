@@ -23,7 +23,7 @@ import { Footer } from "../components/Footer/index.tsx";
 import { HeadCenter } from "../components/Sections/HeadCenter";
 import { AiOutlineCheck } from "react-icons/ai";
 const url = "https://verste.org";
-const title = "Intern | Verste";
+const title = "Contribute | Verste";
 const description =
   "Verste is an open-source platform where experienced scholars volunteer their time to simplify academic-heavy research in areas ranging from computer science to biology and economics into easy-to-understand versions.";
 
