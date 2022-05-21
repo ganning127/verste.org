@@ -23,6 +23,12 @@ module.exports = {
           "https://docs.google.com/forms/d/e/1FAIpQLSe9B0iPoimxo46JXtLTwr3xnADWWJoMSgrrBWW2Tj7o3XJBhw/viewform",
         permanent: false,
       },
+      {
+        source: "/intern/info",
+        destination:
+          "https://docs.google.com/document/d/1GU1KV7ql5dxkj_dkwGQz6cf1tda92QYGAW4l0rlFj3s/edit?usp=sharing",
+        permanent: false,
+      },
     ];
   },
 };
