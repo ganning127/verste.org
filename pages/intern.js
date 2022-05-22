@@ -81,10 +81,9 @@ export default function Intern() {
                 (5/20 - 6/4)
               </ListItem>
               <ListItem>
-                <b>Assignment & Interview:</b> Based on the written application,
-                every applicant that moves forward will have to complete an
-                assignment related to design. Applications who submit the
-                assignment will have an interview with the Verste team.
+                <b>Interview:</b> Based on the written application, applicants
+                who move forward from the first stage will be invited to
+                interview with Verste's core team.
               </ListItem>
             </OrderedList>
 
