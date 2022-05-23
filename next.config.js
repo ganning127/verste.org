@@ -20,7 +20,7 @@ module.exports = {
       {
         source: "/intern/apply",
         destination:
-          "https://docs.google.com/forms/d/e/1FAIpQLSe9B0iPoimxo46JXtLTwr3xnADWWJoMSgrrBWW2Tj7o3XJBhw/viewform",
+          "https://docs.google.com/forms/d/e/1FAIpQLScBDLeZ6LEsQouekpkYLe1gUmCoyrY6jTgovzpW32JicB1EzQ/viewform",
         permanent: false,
       },
       {
