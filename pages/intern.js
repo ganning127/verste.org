@@ -59,8 +59,8 @@ export default function Intern() {
 
         <TextBlock
           title="What are Verste Design Interns?"
-          desc1="Verste is a 501(c)(3) nonprofit organization that creates simplified versions of difficult to read research papers."
-          desc2="Our design internship is an 8-week virtual internship designed to guide you through project-based learning and build connections with other interns and our founders. This summer, join us as we launch our first cohort of design interns."
+          desc1="Come work directly with Verste’s core team to design UI wireframes, engage in weekly workshops, develop creative brand imaging, and so much more!"
+          desc2="Our creative design internship is an 8-week virtual internship designed to guide you through project-based learning and build connections with other interns and our founders. This summer, join us as we launch our first cohort of design interns."
         />
 
         <SmSep line={true} />
