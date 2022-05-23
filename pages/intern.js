@@ -47,7 +47,7 @@ export default function Intern() {
           img="/intern-logo.png"
           title="Creative Design Internship Program 2022"
           emph="June 20 - August 15"
-          desc="In our 8-week design internship, come work with a rapidly growing 501(c)(3) nonprofit organization! With Verste, you’ll be working with our core team to grow, expand, and reach more students across the country. 
+          desc="In our 8-week creative design internship, come work with a rapidly growing 501(c)(3) nonprofit organization! With Verste, you’ll be working with our core team to grow, expand, and reach more students across the country. 
           "
           button1="Apply Now"
           href1="https://docs.google.com/forms/d/e/1FAIpQLScBDLeZ6LEsQouekpkYLe1gUmCoyrY6jTgovzpW32JicB1EzQ/viewform"
@@ -161,7 +161,7 @@ export default function Intern() {
           <WeekBreakdown
             title="Onboarding, Introductions, Setup"
             week="Week 1"
-            desc="Welcome to week 1! Here, we’ll be going over everything you need to make the most of your Verste Design internship."
+            desc="Welcome to week 1! Here, we’ll be going over everything you need to make the most of your Verste Creative Design internship."
             img="/week - 1.png"
           />
           <WeekBreakdown
@@ -203,7 +203,7 @@ export default function Intern() {
           <WeekBreakdown
             title="Final Intern Presentations"
             week="Week 8"
-            desc="This is our final week of the 2022 Verste Design Internship. This week, you’ll be presenting your work to the entire Verste core team. Feel free to create a slidedeck or show off your portfolio."
+            desc="This is our final week of the 2022 Verste Creative Design Internship. This week, you’ll be presenting your work to the entire Verste core team. Feel free to create a slidedeck or show off your portfolio."
             img="/week - 8.png"
           />
         </Box>
