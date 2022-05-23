@@ -45,7 +45,7 @@ export default function Intern() {
       <Container maxW="container.lg" mt="">
         <HeadCenter
           img="/intern-logo.png"
-          title="Verste Design Internship 2022"
+          title="Creative Design Internship 2022"
           emph="June 20 - August 15"
           desc="In our 8-week design internship, come work with a rapidly growing 501(c)(3) nonprofit organization! With Verste, you’ll be working with our core team to grow, expand, and reach more students across the country. 
           "
