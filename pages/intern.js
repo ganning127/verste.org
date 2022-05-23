@@ -50,7 +50,7 @@ export default function Intern() {
           desc="In our 8-week design internship, come work with a rapidly growing 501(c)(3) nonprofit organization! With Verste, you’ll be working with our core team to grow, expand, and reach more students across the country. 
           "
           button1="Apply Now"
-          href1="https://docs.google.com/forms/d/e/1FAIpQLSe9B0iPoimxo46JXtLTwr3xnADWWJoMSgrrBWW2Tj7o3XJBhw/viewform"
+          href1="https://docs.google.com/forms/d/e/1FAIpQLScBDLeZ6LEsQouekpkYLe1gUmCoyrY6jTgovzpW32JicB1EzQ/viewform"
           button2="Learn More"
           href2="https://docs.google.com/document/d/1GU1KV7ql5dxkj_dkwGQz6cf1tda92QYGAW4l0rlFj3s/edit?usp=sharing"
         />
