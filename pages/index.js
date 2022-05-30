@@ -9,7 +9,7 @@ import { DiffComp } from "../components/Once/DiffComp";
 import { Footer } from "../components/Footer/index.tsx";
 import { TextWithButtons } from "../components/Sections/TextWithButtons";
 import { ByTheNumbers } from "../components/Once/ByTheNumbers";
-
+import { FullButtonWithPic } from "../components/TwoCol/FullButtonWithPic";
 const url = "https://verste.org";
 const title = "Verste – Free Simplified Research";
 const description =
@@ -84,6 +84,16 @@ export default function Home() {
           img="/logo.png"
         />
         <MedSep />
+        <HeadingWithDesc>Join Our Discord Server</HeadingWithDesc>
+        <FullButtonWithPic
+          pic="/discord-window.png"
+          logo="/discord.png"
+          desc="Join our community of student researchers, contributors, interns, and team members in one place."
+          buttonText="Discord Invite"
+          buttonLink="https://discord.com/invite/P7st5jHHD6"
+        />
+
+        <SmSep />
       </Container>
 
       <Footer />
