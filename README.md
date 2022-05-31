@@ -2,7 +2,7 @@
 
 ![](https://i.imgur.com/aMeE9zt.png)
 
-Have you ever read a research paper but didn't comprehend it? Verste is here to change that. We're an open source platform where experienced scholars volunteer their time to simplify academic-heavy research in areas ranging from **computer science** to **biology** and **economics** into easy-to-understand versions.
+Based in North Carolina, Verste is a 501(c)(3) nonprofit organization dedicated to making research more accessible by creating simplified research papers. Our core team consists of students from the North Carolina School of Science and Math and Apex Friendship. To read more about our team, head to our team. To learn more about our organization, feel free to read below!
 
 **Website:** [verste.org](https://verste.org/)
 
