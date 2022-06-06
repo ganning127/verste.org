@@ -3,12 +3,6 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
-  env: {
-    VERSTE_EMAIL: process.env.VERSTE_EMAIL,
-    VERSTE_EMAIL_PASS: process.env.VERSTE_EMAIL_PASS,
-    GOOGLE_SERVICE_ACCOUNT_EMAIL: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-    GOOGLE_PRIVATE_KEY: process.env.GOOGLE_PRIVATE_KEY,
-  },
   async redirects() {
     return [
       {
@@ -27,6 +21,12 @@ module.exports = {
         source: "/intern/info",
         destination:
           "https://docs.google.com/document/d/1GU1KV7ql5dxkj_dkwGQz6cf1tda92QYGAW4l0rlFj3s/edit?usp=sharing",
+        permanent: false,
+      },
+      {
+        source: "/contribute/resources",
+        destination:
+          "https://ganning127.github.io/verste-contributor-resources",
         permanent: false,
       },
     ];
