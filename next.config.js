@@ -26,7 +26,7 @@ module.exports = {
       {
         source: "/contribute/resources",
         destination:
-          "https://ganning127.github.io/verste-contributor-resources",
+          "https://verste-team.github.io/verste-contributor-resources/",
         permanent: false,
       },
     ];
