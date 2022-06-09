@@ -3,7 +3,7 @@ import { NavBar } from "../components/NavBar";
 import { HomeLanding } from "../components/Once/HomeLanding";
 import { SmSep } from "../components/Separators/SmSep";
 import { MedSep } from "../components/Separators/MedSep";
-import { Box, Container, Text } from "@chakra-ui/react";
+import { Box, Container, Button } from "@chakra-ui/react";
 import { HeadingWithDesc } from "../components/Headings/HeadingWithDesc";
 import { DiffComp } from "../components/Once/DiffComp";
 import { Footer } from "../components/Footer/index.tsx";
@@ -57,6 +57,22 @@ export default function Home() {
           <HeadingWithDesc>Less time. More info.</HeadingWithDesc>
 
           <DiffComp />
+
+          <Box textAlign="center" mt={8}>
+            <Button
+              as="a"
+              target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfxESQ8oTZXq6dVkjnxNZYoiAD_XyZGM60gCJFKP7asJb26dg/viewform"
+              bg="brandLight.caroBlue"
+              _hover={{
+                bg: "brandLight.caroBlue",
+              }}
+              color="white"
+              rounded="md"
+            >
+              Request a Simplification
+            </Button>
+          </Box>
         </Container>
       </Box>
       <Box>
