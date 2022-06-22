@@ -12,6 +12,12 @@ module.exports = {
         permanent: false,
       },
       {
+        source: "/request",
+        destination:
+          "https://docs.google.com/forms/d/e/1FAIpQLSfxESQ8oTZXq6dVkjnxNZYoiAD_XyZGM60gCJFKP7asJb26dg/viewform",
+        permanent: false,
+      },
+      {
         source: "/intern/apply",
         destination:
           "https://docs.google.com/forms/d/e/1FAIpQLScBDLeZ6LEsQouekpkYLe1gUmCoyrY6jTgovzpW32JicB1EzQ/viewform",
