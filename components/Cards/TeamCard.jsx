@@ -8,7 +8,11 @@ export const TeamCard = ({ name, title, desc, img }) => {
       p="4"
       spacing={5}
     >
-      <Badge colorScheme="blue" px={2} mt={"-60px"}>
+      <Badge
+        colorScheme={title === "Creative Design Intern" ? "purple" : "blue"}
+        px={2}
+        mt={"-60px"}
+      >
         {title}
       </Badge>
       <WrapItem mb={4}>
