@@ -1,9 +1,23 @@
 import "../styles/globals.css";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, useColorMode } from "@chakra-ui/react";
 import theme from "../styles/theme";
 import "@fontsource/abeezee";
 import { Global, css } from "@emotion/react";
 import Head from "next/head";
+import { useEffect } from "react";
+
+function ForceLightMode({ children }) {
+  // force light mode b/c of ChakraUI bug
+  const { colorMode, toggleColorMode } = useColorMode();
+
+  useEffect(() => {
+    if (colorMode === "light") return;
+    toggleColorMode();
+  }, [colorMode]);
+
+  return children;
+}
+
 const GlobalStyle = ({ children }) => {
   return (
     <>
@@ -125,7 +139,9 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <GlobalStyle>
-        <Component {...pageProps} />
+        <ForceLightMode>
+          <Component {...pageProps} />
+        </ForceLightMode>
       </GlobalStyle>
     </ChakraProvider>
   );
