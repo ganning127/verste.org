@@ -67,7 +67,7 @@ export default function About() {
         </HeadingWithDesc>
 
         <TextWithButtons
-          desc="Verste is a student-led nonprofit organization that creates simplified versions of difficult-to-read research papers. As students, we’ve experienced firsthand how difficult it is to understand a research paper filled with complex vocabulary and scientific concepts. We’re here to change that.
+          desc="Verste is a student-led nonprofit that creates simplified versions of difficult-to-read research papers. As students, we’ve experienced firsthand how difficult it is to understand a research paper filled with complex vocabulary and scientific concepts. We’re here to change that.
 
           By creating simplified versions of research papers, we provide a stepping stone for high school students and undergraduate researchers reading their first research papers. At the same time, researchers who’ve read plenty of papers in their careers are provided with a consistent experience that allows them to comprehend key points of a research paper in a fast and efficient manner."
         />
