@@ -52,7 +52,7 @@ export default function About() {
       <Container maxW="container.xl" mt="">
         <HeadWithPic
           title="About Us"
-          desc="Based in North Carolina, Verste is a 501(c)(3) nonprofit organization dedicated to making research more accessible by creating simplified research papers. Our core team consists of students from the North Carolina School of Science and Math and Apex Friendship. To read more about our team, head to our team. To learn more about our organization, feel free to read below!"
+          desc="Based in North Carolina, Verste is a 501(c)(3) nonprofit dedicated to making research more accessible by creating simplified research papers. Our core team consists of students from the North Carolina School of Science and Math and Apex Friendship. To read more about our team, head to our team. To learn more about our organization, feel free to read below!"
           button1="Our Notion"
           button2="Contribute"
           href1="https://verste.notion.site/About-Verste-e03cb661bdcb43efa87b41b4cdfd1b0c"
@@ -132,12 +132,12 @@ export default function About() {
               Verste Contributors
             </Heading>
             <Text fontSize="lg" mt={4} my={4}>
-              As a nonprofit organization, Verste is made possible by the
-              generous efforts of our contributors, who dedicate their time to
-              our mission. If you're interested in creating simplified versions
-              of research papers you've read (or read recently), we'd love for
-              you to join our team of contributors! As a contributor, you'll be
-              able to <b>earn service hours</b> for your contributions, 
+              As a nonprofit, Verste is made possible by the generous efforts of
+              our contributors, who dedicate their time to our mission. If
+              you're interested in creating simplified versions of research
+              papers you've read (or read recently), we'd love for you to join
+              our team of contributors! As a contributor, you'll be able to 
+              <b>earn service hours</b> for your contributions, 
               <b>gain knowledge</b> and research experience,{" "}
               <b>get involved in the community</b>, and make a difference.{" "}
             </Text>

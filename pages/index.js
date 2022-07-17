@@ -34,7 +34,7 @@ export default function Home() {
         <SmSep />
         <Container maxW="container.xl">
           <HomeLanding
-            desc="Verste is a 501(c)(3) nonprofit organization dedicated to making research more accessible by creating simplified research papers."
+            desc="Verste is a 501(c)(3) nonprofit dedicated to making research more accessible by creating simplified research papers."
             button1="Start Reading"
             href1="https://wiki.verste.org/"
             button2="About Us"
@@ -92,7 +92,7 @@ export default function Home() {
         <MedSep />
         <HeadingWithDesc>Made possible, by you</HeadingWithDesc>
         <TextWithButtons
-          desc="Verste is a 501(c)(3) nonprofit organization dedicated to making research more accessible by creating simplified research papers. As such, we depend on the generous efforts by our contributors to make Verste possible. If you would like to help us out, please fill out the short application form found below! As a contributor, you'll be able to simplify any research papers you'd like, including papers that you've read before, or papers that you're tackling from scratch. Additionally, you'll be contributing to the scientific community, making research more accessible for those without previous experiences in this topic."
+          desc="Verste is a 501(c)(3) nonprofit dedicated to making research more accessible by creating simplified research papers. As such, we depend on the generous efforts by our contributors to make Verste possible. If you would like to help us out, please fill out the short application form found below! As a contributor, you'll be able to simplify any research papers you'd like, including papers that you've read before, or papers that you're tackling from scratch. Additionally, you'll be contributing to the scientific community, making research more accessible for those without previous experiences in this topic."
           button1="About Contributors"
           href1="/contribute"
           button2="Apply Now"

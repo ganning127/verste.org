@@ -47,7 +47,7 @@ export default function Intern() {
           img="/intern-logo.png"
           title="Creative Design Internship Program 2022"
           emph="June 20 - August 15"
-          desc="In our 8-week creative design internship, come work with a rapidly growing 501(c)(3) nonprofit organization! With Verste, you’ll be working with our core team to grow, expand, and reach more students across the country. 
+          desc="In our 8-week creative design internship, come work with a rapidly growing 501(c)(3) nonprofit! With Verste, you’ll be working with our core team to grow, expand, and reach more students across the country. 
           "
           button1="Apply Now"
           href1="https://docs.google.com/forms/d/e/1FAIpQLScBDLeZ6LEsQouekpkYLe1gUmCoyrY6jTgovzpW32JicB1EzQ/viewform"
