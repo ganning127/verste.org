@@ -11,19 +11,19 @@ export const ByTheNumbers = () => {
       >
         <StatsCard
           title="Categories"
-          num={7}
+          num={12}
           color="green.400"
           desc="With topics including biology, chemistry, computer science, economics, physics, and social sciences, Verste contains simplified research from topics in many scientific journals."
         />
         <StatsCard
           title="Readers"
-          num={100}
+          num={120}
           color="brand.gold"
           desc="Currently, Verste has over 100 readers from around the world. We're not only making an impact in the scientific community, but also bringing technical education to the reach of everyone."
         />
         <StatsCard
           title="Contributors"
-          num={60}
+          num={130}
           color="brandLight.caroBlue"
           desc="With over 60 contributors simplifying and editing research papers, we strive to make our simplifications to the upmost quality. We are growing faster than ever. "
         />
