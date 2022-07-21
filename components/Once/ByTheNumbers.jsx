@@ -19,7 +19,7 @@ export const ByTheNumbers = () => {
           title="Readers"
           num={120}
           color="brand.gold"
-          desc="Currently, Verste has over 100 readers from around the world. We're not only making an impact in the scientific community, but also bringing technical education to the reach of everyone."
+          desc="Currently, Verste has over 120 readers from around the world. We're not only making an impact in the scientific community, but also bringing technical education to the reach of everyone."
         />
         <StatsCard
           title="Contributors"
