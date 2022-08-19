@@ -11,6 +11,7 @@ const DesktopNavLink = (props) => {
       borderBottom="2px"
       borderColor="transparent"
       transition="all 0.4s"
+      target={props.href.startsWith("http") ? "_blank" : "_self"}
       color="brandLight.gray"
       _hover={{
         color: "brandLight.blue",
