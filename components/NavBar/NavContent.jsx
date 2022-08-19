@@ -39,6 +39,10 @@ const links = [
     ),
     href: "/simplify",
   },
+  {
+    label: "Donate",
+    href: "https://hack.ms/donate-verste",
+  },
 ];
 
 const MobileNavContent = (props) => {
