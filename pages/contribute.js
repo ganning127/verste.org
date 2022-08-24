@@ -107,16 +107,7 @@ export default function Contribute() {
                   for simplifying and editing research papers
                 </Text>
               </ListItem>
-              <ListItem>
-                <ListIcon as={AiOutlineCheck} color="green.500" />
-                <Text as="span" fontSize={{ base: "md", lg: "lg" }}>
-                  Earn{" "}
-                  <Text as="span" color="blue.400" fontWeight="bold">
-                    Presidential Volunteer Service Award
-                  </Text>{" "}
-                  hours
-                </Text>
-              </ListItem>
+
               <ListItem>
                 <ListIcon as={AiOutlineCheck} color="green.500" />
                 <Text as="span" fontSize={{ base: "md", lg: "lg" }}>
