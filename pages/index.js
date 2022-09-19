@@ -11,7 +11,7 @@ import { TextWithButtons } from "../components/Sections/TextWithButtons";
 import { ByTheNumbers } from "../components/Once/ByTheNumbers";
 import { FullButtonWithPic } from "../components/TwoCol/FullButtonWithPic";
 const url = "https://verste.org";
-const title = "Verste – Free Simplified Research";
+const title = "Verste | Free Simplified Research";
 const description =
   "Verste is an open-source platform where experienced scholars volunteer their time to simplify academic-heavy research in areas ranging from computer science to biology and economics into easy-to-understand versions.";
 

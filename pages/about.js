@@ -32,6 +32,10 @@ const sponsors = [
     href: "https://hackplus.io/",
     img: "/sponsors/hackplus.png",
   },
+  {
+    href: "https://www.tacobellfoundation.org/ambition-accelerator/",
+    img: "/sponsors/taco_bell.png",
+  },
 ];
 
 export default function About() {
@@ -104,11 +108,11 @@ export default function About() {
             <Heading color="brandLight.gray" fontSize="4xl">
               Partners & Sponsors
             </Heading>
-            <SimpleGrid columns={3} mt={4}>
+            <SimpleGrid columns={{ base: 2, md: 3 }} mt={4} spacing={8}>
               {sponsors.map((sponsor, index) => {
                 return (
                   <Box as="a" href={sponsor.href} target="_blank" key={index}>
-                    <Img src={sponsor.img} maxH="50px" />
+                    <Img src={sponsor.img} maxH="80px" />
                   </Box>
                 );
               })}
