@@ -12,6 +12,8 @@ import {
   FormLabel,
   Input,
   Heading,
+  Alert,
+  AlertIcon,
   NumberInput,
   NumberInputStepper,
   UnorderedList,
@@ -53,10 +55,21 @@ export default function Simplify() {
 
   const handleSimplify = async () => {
     setLoading(true);
+
     if (paper === "") {
       alert("Please enter a paper");
       return;
     }
+
+    const count = paper.split(". ").length - 1;
+    console.log(count);
+    if (count < 20) {
+      alert(
+        "Please enter a longer paper. The paper must be at least 20 sentences long."
+      );
+      return;
+    }
+
     let useQ = "";
     console.log("question:", question);
     if (question === "") {
@@ -96,7 +109,12 @@ export default function Simplify() {
       />
 
       <NavBar bg="#fafaff !important" />
-
+      <Alert status="warning" textAlign="center" justifyContent="center">
+        <AlertIcon />
+        We are currently experiencing high wait times for our simplification
+        service. Thank you for your patience, and we&apos;re working to fix
+        this!
+      </Alert>
       <SmSep />
 
       <Container maxW="container.lg">

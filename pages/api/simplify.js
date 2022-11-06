@@ -3,7 +3,7 @@ export default async function handler(req, res) {
 
   try {
     const resp = await fetch(
-      "https://hf.space/embed/ganning/summarize/+/api/predict/",
+      "https://hf.space/embed/ganning/summarize/api/predict/",
       {
         method: "POST",
         body: JSON.stringify({ data: [paper, question, parseInt(num)] }),
