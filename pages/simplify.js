@@ -54,21 +54,21 @@ export default function Simplify() {
   };
 
   const handleSimplify = async () => {
-    setLoading(true);
-
     if (paper === "") {
       alert("Please enter a paper");
       return;
     }
 
     const count = paper.split(". ").length - 1;
-    console.log(count);
+
     if (count < 20) {
       alert(
         "Please enter a longer paper. The paper must be at least 20 sentences long."
       );
       return;
     }
+
+    setLoading(true);
 
     let useQ = "";
     console.log("question:", question);
@@ -82,7 +82,7 @@ export default function Simplify() {
       method: "POST",
       body: JSON.stringify({
         paper,
-        question: useQ,
+        // question: useQ,
         num,
       }),
     });
@@ -90,8 +90,8 @@ export default function Simplify() {
     const data = await resp.json();
     console.log(data);
     setResponded(true);
-    setSummary(data.summary);
-    setAnswer(data.answer);
+    // setSummary(data.summary);
+    // setAnswer(data.answer);
     setBullets(data.bullets);
     setLoading(false);
   };
@@ -111,9 +111,12 @@ export default function Simplify() {
       <NavBar bg="#fafaff !important" />
       <Alert status="warning" textAlign="center" justifyContent="center">
         <AlertIcon />
-        We are currently experiencing high wait times for our simplification
+        {/* We are currently experiencing high wait times for our simplification
         service. Thank you for your patience, and we&apos;re working to fix
-        this!
+        this! */}
+        We're currently performing maintenance on the abstractive summarization
+        service. The model will be back up soon! In the meanwtime, feel free to
+        use our extractive summarization service.
       </Alert>
       <SmSep />
 
@@ -136,7 +139,7 @@ export default function Simplify() {
                 />
               </FormControl>
 
-              <FormControl borderRadius="20" color="gray.900">
+              {/* <FormControl borderRadius="20" color="gray.900">
                 <FormLabel htmlFor="lastname" color="blue.dark">
                   Type in a question (N/A if none)
                 </FormLabel>
@@ -146,7 +149,7 @@ export default function Simplify() {
                   placeholder="e.g. How many trials did the authors do?"
                   color="gray.900"
                 />
-              </FormControl>
+              </FormControl> */}
 
               <FormControl isRequired borderRadius="20" color="gray.900">
                 <FormLabel>Number of bullets wanted</FormLabel>
@@ -198,15 +201,19 @@ export default function Simplify() {
 
             {responded && (
               <VStack justifyContent="flex-start">
-                <Box bg="white" p={4} rounded="md" shadow="md" w="100%">
-                  <Text fontWeight="bold">Summary:</Text>
-                  <Text>{summary}</Text>
-                </Box>
+                {summary && (
+                  <Box bg="white" p={4} rounded="md" shadow="md" w="100%">
+                    <Text fontWeight="bold">Summary:</Text>
+                    <Text>{summary}</Text>
+                  </Box>
+                )}
 
-                <Box bg="white" p={4} rounded="md" shadow="md" w="100%">
-                  <Text fontWeight="bold">Answer:</Text>
-                  <Text>{question === "N/A" ? "None" : answer}</Text>
-                </Box>
+                {question && (
+                  <Box bg="white" p={4} rounded="md" shadow="md" w="100%">
+                    <Text fontWeight="bold">Answer:</Text>
+                    <Text>{question === "N/A" ? "None" : answer}</Text>
+                  </Box>
+                )}
 
                 <Box bg="white" p={4} rounded="md" shadow="md" w="100%">
                   <Text fontWeight="bold">Main Points:</Text>
