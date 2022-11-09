@@ -115,7 +115,7 @@ export default function Simplify() {
         service. Thank you for your patience, and we&apos;re working to fix
         this! */}
         We're currently performing maintenance on the abstractive summarization
-        service. The model will be back up soon! In the meanwtime, feel free to
+        service. The model will be back up soon! In the meantime, feel free to
         use our extractive summarization service.
       </Alert>
       <SmSep />
