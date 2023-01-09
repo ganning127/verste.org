@@ -160,7 +160,7 @@ export default function RVerste() {
                   "Learn all the math you'll need to know to understand all the nitty gritty of how Neural Networks work.",
                   "Learn how gradient descent optimization works (the secret ingredient to how Neural Networks learn!)",
                   "Learn how to program a Neural Network from scratch, and train it",
-                  "Learn how to implement a language model from scratch",
+                  "Learn how to train a Neural Network to recognize handwritten digits",
                   "Learn how to use industry leading frameworks like PyTorch to speed up development of Neural Networks",
                 ]}
                 email="jacob@verste.org"
