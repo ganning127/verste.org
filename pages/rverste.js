@@ -61,7 +61,7 @@ export default function RVerste() {
       <Container maxW="container.xl" mt="">
         <HeadWithPic
           title="RVerste"
-          desc="Research @ Verste (RVerste) is a free mentorship program for students to learn topics from graph theory, computational combinatorics, and deep learning before conducting their own research. We're currently accepting applications for our inagural cohort of RVerste, which starts on Feburary 6th, 2023."
+          desc="Research @ Verste (RVerste) is a free mentorship program for students to learn topics from graph theory, computational combinatorics, and deep learning before conducting their own research. We're currently accepting applications for our inaugural cohort of RVerste, which starts on February 6th, 2023."
           button2="RVerste Notion"
           button1="Apply Now"
           href2="https://verste.notion.site/RVerste-7e19e14db71444dea89ca8de10588395"
@@ -75,24 +75,24 @@ export default function RVerste() {
           Learn college-level concepts.
         </HeadingWithDesc>
 
-        <TextWithButtons desc="Topics such as combinatorics (much less computational combinatorics!) are usually not taught until college. Getting a head start now not only prepares you for higher education, but allows you to explore your interests and find out what you like. As a completely free program hosted by Verste, RVerste allows anyone to apply. RVerste is separated into 3 different programs: Computational Combinatorics, Deep Learning, and Graph Theory, with two programs having the Feb 6 start date. Feel free to apply to any of them below." />
+        <TextWithButtons desc="Topics such as combinatorics (much less computational combinatorics!) are usually not taught until college. Getting a head start now not only prepares you for higher education, but allows you to explore your interests and find out what you like. As a completely free program hosted by Verste, RVerste allows anyone to apply. RVerste is separated into 3 different programs: Computational Combinatorics, Deep Learning, and Graph Theory, with two programs having the February 6 start date. Feel free to apply to any of them below." />
 
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={16} mt={4}>
           <RVersteCard
             title="Deep Learning"
-            desc="Do you want to learn how AI like GPT-3 and Stable Diffusion really work? Well, if you’d like to a deep dive into how these models work at a very fundamental mathematical level, this is a great opportunity for you!"
+            desc="Do you want to learn how AI like GPT-3 and Stable Diffusion really work? Well, if you’d like to a deep dive into how these models work at a very fundamental mathematical level, this is a great opportunity for you! RVerste Deep Learning is a 5 week program from February 6th, 2023 - March 10, 2023."
             href="/rverste/apply/deep-learning"
             img="/rverste-1.png"
           />
           <RVersteCard
             title="Computational Combinatorics"
-            desc="Combinatorics is an area of mathematics primarily concerned with counting. For example, we'll learn about the number of ways to arrage 10 people at a dining table, all while using code."
+            desc="Are you interested in the fundamental math that analyze the speed of an algorithm? In Computational Combinatorics, you will be exposed to the world of counting through interesting competitive math problems. RVerste Computational Combinatorics is a 7 week program from February 6th, 2023 - March 24, 2023."
             href="/rverste/apply/comp-combo"
             img="/rverste-2.png"
           />
           <RVersteCard
             title="Graph Theory"
-            desc="Graph theory is the study of graphs (not the x-y kind!) and the relationships between graphs. This course is an introduction to mathematical proofs and concepts in graph theory, including planarity, coloring, and more."
+            desc="Graph theory is the study of graphs (not the x-y kind!) and the relationships between graphs. This course is an introduction to mathematical proofs and concepts in graph theory, including planarity, coloring, and more. RVerste x Graph Theory is a 8 week program from April 3 - May 29, 2023."
             // href="/rverste/apply/graph-theory"
             img="/RVerste (1).png"
           />
@@ -157,10 +157,11 @@ export default function RVerste() {
                 instructorImg="/team/jacob.jpeg"
                 img="/rverste-1.png"
                 learnItems={[
-                  "Learn how to implement a neural network from scratch",
-                  "Learn how to implement a GAN from scratch",
-                  "Learn how to implement a transformer from scratch",
+                  "Learn all the math you'll need to know to understand all the nitty gritty of how Neural Networks work.",
+                  "Learn how gradient descent optimization works (the secret ingredient to how Neural Networks learn!)",
+                  "Learn how to program a Neural Network from scratch, and train it",
                   "Learn how to implement a language model from scratch",
+                  "Learn how to use industry leading frameworks like PyTorch to speed up development of Neural Networks",
                 ]}
                 email="jacob@verste.org"
                 apply="/rverste/apply/deep-learning"
@@ -176,7 +177,8 @@ export default function RVerste() {
             >
               <RVersteDetails
                 title="Computational Combinatorics"
-                desc="Combinatorics is an area of mathematics primarily concerned with counting. For example, we'll learn about the number of ways to arrage 10 people at a dining table, all while using code."
+                desc="Are you interested in the fundamental math that analyze the speed of an algorithm? In Computational Combinatorics, you will be exposed to the world of counting through interesting competitive math problems.
+                "
                 dates="February 6th, 2023 - March 24, 2023"
                 meetTimes="Mondays & Fridays at 5 - 6 PM ET"
                 syllabus="https://verste.notion.site/RVerste-x-Computational-Combinatorics-94e2bf422e2d4ecda1a922fe2b3a0224"
@@ -184,10 +186,11 @@ export default function RVerste() {
                 instructorName="Ivan Zheng"
                 instructorImg="/team/ivan.png"
                 learnItems={[
-                  "Learn how to implement a neural network from scratch",
-                  "Learn how to implement a GAN from scratch",
-                  "Learn how to implement a transformer from scratch",
-                  "Learn how to implement a language model from scratch",
+                  "Learn how to apply fundamental combinatorics principles to more advanced problems",
+                  "Learn how to implement Python to solve problems computationally",
+                  "Learn the thought process behind competitive math problems",
+                  "Learn how to tackle your own project and solve your own problem through research",
+                  "Learn how to visual and tackle combinatorics problems",
                 ]}
                 email="ivan@verste.org"
                 apply="/rverste/apply/comp-combo"

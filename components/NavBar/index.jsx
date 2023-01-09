@@ -104,7 +104,7 @@ export const NavBar = ({ bg }) => {
           <Link fontWeight="bold" href="/rverste">
             Research @ Verste (RVerste)
           </Link>{" "}
-          are now open! They&apos;re due on Janurary 28, 2022
+          are now open! They&apos;re due on January 28, 2022
         </Text>
       </Box>
     </Box>

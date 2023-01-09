@@ -35,9 +35,7 @@ export const RVersteDetails = ({
         {title}
       </Heading>
       <Text mt={4} fontSize="lg">
-        Do you want to learn how AI like GPT-3 and Stable Diffusion really work?
-        Well, if you’d like to a deep dive into how these models work at a very
-        fundamental mathematical level, this is a great opportunity for you
+        {desc}
       </Text>
       {apply ? (
         <Button
