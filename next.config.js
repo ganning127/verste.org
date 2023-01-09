@@ -35,6 +35,29 @@ module.exports = {
           "https://verste-team.github.io/verste-contributor-resources/",
         permanent: false,
       },
+      {
+        source: "/rverste/apply",
+        destination:
+          "https://verste.notion.site/RVerste-Applications-56b0068b2a894af995275fa0df73ec1b",
+        permanent: false,
+      },
+      {
+        source: "/rverste/apply/deep-learning",
+        destination:
+          "https://docs.google.com/forms/d/e/1FAIpQLSfT5XgdA2c7xj-Z1IEQ9W-zwOogACyDXdqZNtDun9-zmBP-mA/viewform",
+        permanent: false,
+      },
+      {
+        source: "/rverste/apply/comp-combo",
+        destination:
+          "https://docs.google.com/forms/d/e/1FAIpQLSddzgu8VtqtDLVPFk4wmd3XHBctz37c3mxCsHjNuYceB3bAhQ/viewform",
+        permanent: false,
+      },
+      {
+        source: "/rverste/apply/graph-theory",
+        destination: "/coming-soon",
+        permanent: false,
+      },
     ];
   },
 };
