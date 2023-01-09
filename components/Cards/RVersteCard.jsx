@@ -20,6 +20,7 @@ export const RVersteCard = ({ title, desc, img, href }) => {
           _hover={{
             bg: "brandLight.blue",
           }}
+          target="_blank"
         >
           Apply for {title}
         </Button>
