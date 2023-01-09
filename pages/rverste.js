@@ -100,7 +100,7 @@ export default function RVerste() {
 
         <MedSep line={true} />
 
-        <HeadingWithDesc smaller={true}>More Program Deetails</HeadingWithDesc>
+        <HeadingWithDesc smaller={true}>More Program Details</HeadingWithDesc>
 
         <Tabs variant="unstyled" textAlign="center">
           <TabList justifyContent="center">
