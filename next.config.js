@@ -55,7 +55,8 @@ module.exports = {
       },
       {
         source: "/rverste/apply/graph-theory",
-        destination: "/coming-soon",
+        destination:
+          "https://docs.google.com/forms/d/e/1FAIpQLSdWyXjDSz0UibgvOTa5eiKH2H0TGrwYiZ4n8ghmeyWdT3nDyA/viewform",
         permanent: false,
       },
     ];
