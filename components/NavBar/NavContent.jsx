@@ -15,7 +15,6 @@ import { HiOutlineMenu, HiX } from "react-icons/hi";
 import { NavLink } from "./NavLink";
 import { NavList } from "./NavList";
 import { NavListItem } from "./NavListItem";
-import { AiOutlineRight } from "react-icons/ai";
 
 const links = [
   {
@@ -28,8 +27,8 @@ const links = [
     href: "/contribute",
   },
   {
-    label: "Intern",
-    href: "/intern",
+    label: "RVerste",
+    href: "/rverste",
   },
   {
     label: (
