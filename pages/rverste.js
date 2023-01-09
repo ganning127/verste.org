@@ -36,6 +36,12 @@ const title = "RVerste | Verste";
 const description =
   "RVerste is a free mentorship program for students to learn topics from graph theory, computational combinatorics, and deep learning before conducting their own research.";
 
+const image = {
+  url: "https://i.imgur.com/jHqvKVY.png",
+  width: 800,
+  height: 600,
+  alt: "RVerste cover picture.",
+};
 export default function RVerste() {
   return (
     <>
@@ -47,6 +53,7 @@ export default function RVerste() {
           url,
           title,
           description,
+          images: [image],
         }}
       />
       <NavBar bg="#fafaff !important" />
