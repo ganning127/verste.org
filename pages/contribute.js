@@ -97,7 +97,7 @@ export default function Contribute() {
               Contributor Benefits
             </Heading>
             <List spacing={2} mt={4}>
-              <ListItem>
+              {/* <ListItem>
                 <ListIcon as={AiOutlineCheck} color="green.500" />
                 <Text as="span" fontSize={{ base: "md", lg: "lg" }}>
                   Earn{" "}
@@ -106,7 +106,7 @@ export default function Contribute() {
                   </Text>{" "}
                   for simplifying and editing research papers
                 </Text>
-              </ListItem>
+              </ListItem> */}
 
               <ListItem>
                 <ListIcon as={AiOutlineCheck} color="green.500" />
@@ -118,7 +118,7 @@ export default function Contribute() {
                   through your efforts
                 </Text>
               </ListItem>
-              <ListItem>
+              {/* <ListItem>
                 <ListIcon as={AiOutlineCheck} color="green.500" />
                 <Text as="span" fontSize={{ base: "md", lg: "lg" }}>
                   Potential{" "}
@@ -126,8 +126,8 @@ export default function Contribute() {
                     LinkedIn endorsements
                   </Text>
                 </Text>
-              </ListItem>
-              <ListItem>
+              </ListItem> */}
+              {/* <ListItem>
                 <ListIcon as={AiOutlineCheck} color="green.500" />
                 <Text as="span" fontSize={{ base: "md", lg: "lg" }}>
                   A{" "}
@@ -136,7 +136,7 @@ export default function Contribute() {
                   </Text>{" "}
                   from our founders
                 </Text>
-              </ListItem>
+              </ListItem> */}
               <ListItem>
                 <ListIcon as={AiOutlineCheck} color="green.500" />
                 <Text as="span" fontSize={{ base: "md", lg: "lg" }}>
