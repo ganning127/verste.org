@@ -120,10 +120,10 @@ export default function About() {
           </Box>
         </SimpleGrid>
 
-        <MedSep line={true} />
+        {/* <MedSep line={true} />
         <HeadingWithDesc>Our Team </HeadingWithDesc>
         <Box h={1} my={2} />
-        <TeamGrid />
+        <TeamGrid /> */}
 
         <MedSep line={true} />
         <SimpleGrid
