@@ -98,15 +98,6 @@ export const NavBar = ({ bg }) => {
           </Flex>
         </Box>
       </Box>
-      <Box bg="brandLight.blue" color="white">
-        <Text fontSize="md" textAlign="center" py={2}>
-          Applications for{" "}
-          <Link fontWeight="bold" href="/rverste">
-            Research @ Verste (RVerste)
-          </Link>{" "}
-          are now open! They&apos;re due on January 28, 2022
-        </Text>
-      </Box>
     </Box>
   );
 };
