@@ -92,8 +92,8 @@ export default function RVerste() {
           />
           <RVersteCard
             title="Graph Theory"
-            desc="Graph theory is the study of graphs (not the x-y kind!) and the relationships between graphs. This course is an introduction to mathematical proofs and concepts in graph theory, including planarity, coloring, and more. RVerste x Graph Theory is a 8 week program from April 3 - May 29, 2023."
-            // href="/rverste/apply/graph-theory"
+            desc="Graph theory is the study of graphs (not the x-y kind!) and the relationships between graphs. This course is an introduction to mathematical proofs and concepts in graph theory, including planarity, coloring, and more. RVerste x Graph Theory is a 8 week program from April 3 - May 19, 2023."
+            href="/rverste/apply/graph-theory"
             img="/RVerste (1).png"
           />
         </SimpleGrid>
@@ -220,7 +220,7 @@ export default function RVerste() {
                   "Learn how to write mathematical proofs, and how to read proofs from others.",
                 ]}
                 email="ganning@verste.org"
-                // apply="/rverste/apply/comp-combo"
+                apply="/rverste/apply/graph-theory"
               />
             </TabPanel>{" "}
           </TabPanels>
