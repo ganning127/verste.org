@@ -61,7 +61,7 @@ export default function RVerste() {
       <Container maxW="container.xl" mt="">
         <HeadWithPic
           title="RVerste"
-          desc="Research @ Verste (RVerste) is a free mentorship program for students to learn topics from graph theory, computational combinatorics, and deep learning before conducting their own research. We're currently accepting applications for our inaugural cohort of RVerste, which starts on February 6th, 2023."
+          desc="Research @ Verste (RVerste) is a free mentorship program for students to learn topics from graph theory, computational combinatorics, and deep learning before conducting their own research. All applications for RVerste 2023 have closed, please check back next year!"
           button2="RVerste Notion"
           button1="Apply Now"
           href2="https://verste.notion.site/RVerste-7e19e14db71444dea89ca8de10588395"
